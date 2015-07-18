@@ -13,7 +13,7 @@ dependencies:
 
 test:
   override:
-    - docker run --rm blacklabelops/java-7-jre java -version
-    - docker run --rm blacklabelops/java-8-jre java -version
-    - docker run --rm blacklabelops/java-7-jdk java -version
-    - docker run --rm blacklabelops/java-8-jdk java -version
+    - docker run blacklabelops/java-7-jre java -version
+    - docker run blacklabelops/java-8-jre java -version
+    - docker run blacklabelops/java-7-jdk java -version
+    - docker run blacklabelops/java-8-jdk java -version
