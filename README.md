@@ -1,5 +1,7 @@
 # BlackLabelOps/Java
 
+[![Circle CI](https://circleci.com/gh/blacklabelops/java/tree/master.svg?style=svg)](https://circleci.com/gh/blacklabelops/java/tree/master)
+
 Docker Container on CentOS with Java preinstalled.
 
 These are base containers for maintaining the Java Version.
@@ -11,6 +13,20 @@ Example:
 Folder: java-jdk-8-oracle
 
 Version: Java Development Kit (JDK) Version 8, VM implementation by Oracle
+
+## Docker Hub & Docker Registry
+
+[![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jre-7)](https://registry.hub.docker.com/u/blacklabelops/java-jre-7)
+[![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jre-7)](https://registry.hub.docker.com/u/blacklabelops/java-jre-7)
+
+[![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jre-8)](https://registry.hub.docker.com/u/blacklabelops/java-jre-8)
+[![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jre-8)](https://registry.hub.docker.com/u/blacklabelops/java-jre-8)
+
+[![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jdk-7)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-7)
+[![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jdk-7)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-7)
+
+[![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jdk-8)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-8)
+[![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jdk-8)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-8)
 
 ## Vagrant
 
