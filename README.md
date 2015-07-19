@@ -2,8 +2,6 @@
 
 [![Circle CI](https://circleci.com/gh/blacklabelops/java/tree/master.svg?style=svg)](https://circleci.com/gh/blacklabelops/java/tree/master)
 
-Docker Container on CentOS with Java preinstalled.
-
 These are base containers for maintaining the Java Version.
 
 The Dockerfiles for the different Java versions are maintained in the respective folders.
