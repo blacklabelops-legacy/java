@@ -17,18 +17,22 @@ Version: Java Development Kit (JDK) Version 8, VM implementation by Oracle
 [![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jre-7)](https://registry.hub.docker.com/u/blacklabelops/java-jre-7)
 
 [![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jre-7)](https://registry.hub.docker.com/u/blacklabelops/java-jre-7)
+[![](https://badge.imagelayers.io/blacklabelops/java-jre-7:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-7:latest 'Get your own badge on imagelayers.io')
 
 [![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jre-8)](https://registry.hub.docker.com/u/blacklabelops/java-jre-8)
 
 [![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jre-8)](https://registry.hub.docker.com/u/blacklabelops/java-jre-8)
+[![](https://badge.imagelayers.io/blacklabelops/java-jre-8:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-8:latest 'Get your own badge on imagelayers.io')
 
 [![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jdk-7)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-7)
 
 [![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jdk-7)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-7)
+[![](https://badge.imagelayers.io/blacklabelops/java-jdk-7:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-7:latest 'Get your own badge on imagelayers.io')
 
 [![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jdk-8)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-8)
 
 [![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jdk-8)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-8)
+[![](https://badge.imagelayers.io/blacklabelops/java-jdk-8:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-8:latest 'Get your own badge on imagelayers.io')
 
 ## Vagrant
 
