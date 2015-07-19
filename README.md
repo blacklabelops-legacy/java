@@ -1,6 +1,6 @@
 # BlackLabelOps/Java
 
-[![Circle CI](https://circleci.com/gh/blacklabelops/java/tree/master.svg?style=svg)](https://circleci.com/gh/blacklabelops/java/tree/master)
+[![Circle CI](https://circleci.com/gh/blacklabelops/java/tree/master.svg?style=shield)](https://circleci.com/gh/blacklabelops/java/tree/master)
 
 These are base containers for maintaining the Java Version.
 
