@@ -52,3 +52,7 @@ $ vagrant ssh
 * [Oracle Java](https://java.com/de/download/)
 * [Vagrant Homepage](https://www.vagrantup.com/)
 * [Virtualbox Homepage](https://www.virtualbox.org/)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/blacklabelops/java/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
