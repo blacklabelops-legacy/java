@@ -10,10 +10,12 @@ dependencies:
     - docker build -t="blacklabelops/java-8-jre" -f ./java-jre-8-oracle/Dockerfile java-jre-8-oracle/
     - docker build -t="blacklabelops/java-7-jdk" -f ./java-jdk-7-oracle/Dockerfile java-jdk-7-oracle/
     - docker build -t="blacklabelops/java-8-jdk" -f ./java-jdk-8-oracle/Dockerfile java-jdk-8-oracle/
-    
+    - docker build -t="blacklabelops/java-6-jdk" -f ./java-jdk-8-oracle/Dockerfile java-jdk-6-oracle/
+
 test:
   override:
     - docker run blacklabelops/java-7-jre java -version
     - docker run blacklabelops/java-8-jre java -version
     - docker run blacklabelops/java-7-jdk java -version
     - docker run blacklabelops/java-8-jdk java -version
+    - docker run blacklabelops/java-6-jdk java -version
