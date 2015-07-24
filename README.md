@@ -24,6 +24,11 @@ Version: Java Development Kit (JDK) Version 8, VM implementation by Oracle
 [![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jre-8)](https://registry.hub.docker.com/u/blacklabelops/java-jre-8)
 [![](https://badge.imagelayers.io/blacklabelops/java-jre-8:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-8:latest 'Get your own badge on imagelayers.io')
 
+[![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jdk-6)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-6)
+
+[![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jdk-6)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-6)
+[![](https://badge.imagelayers.io/blacklabelops/java-jdk-6:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-6:latest 'Get your own badge on imagelayers.io')
+
 [![Docker Hub Info](http://dockeri.co/image/blacklabelops/java-jdk-7)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-7)
 
 [![Docker Build Status](http://hubstatus.container42.com/blacklabelops/java-jdk-7)](https://registry.hub.docker.com/u/blacklabelops/java-jdk-7)
@@ -55,4 +60,3 @@ $ vagrant ssh
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/blacklabelops/java/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
