@@ -4,7 +4,7 @@ MAINTAINER Steffen Bleul <blacklabelops@itbleul.de>
 # install dev tools
 RUN yum install -y \
     tar \
-    wget \
+    wget && \
     yum clean all && rm -rf /var/cache/yum/*
 
 # this envs are for maintaining java updates.
