@@ -1,5 +1,5 @@
 FROM blacklabelops/centos
-MAINTAINER Steffen Bleul <blacklabelops@itbleul.de>
+MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # install dev tools
 RUN yum install -y \
