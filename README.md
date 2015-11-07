@@ -4,6 +4,8 @@
 
 These are base containers for maintaining the Java Version.
 
+Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://www.hipchat.com/geogBFvEM)
+
 The Dockerfiles for the different Java versions are maintained in the respective folders.
 
 Example:
