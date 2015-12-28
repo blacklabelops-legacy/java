@@ -1,4 +1,4 @@
-FROM blacklabelops/centos
+FROM blacklabelops/centos:7.1.503
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # install dev tools
@@ -9,8 +9,8 @@ RUN yum install -y \
 
 # this envs are for maintaining java updates.
 ENV JAVA_MAJOR_VERSION=8
-ENV JAVA_UPDATE_VERSION=60
-ENV JAVA_BUILD_NUMER=27
+ENV JAVA_UPDATE_VERSION=66
+ENV JAVA_BUILD_NUMER=17
 # install java
 ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
 ENV JAVA_TARBALL=jre-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-linux-x64.tar.gz
