@@ -14,18 +14,18 @@ dependencies:
 
 test:
   override:
-    - docker run --rm blacklabelops/java-7-jre java -version
-    - docker run --rm blacklabelops/java-7-jre which java
-    - docker run --rm blacklabelops/java-7-jre echo $JAVA_HOME
-    - docker run --rm blacklabelops/java-8-jre java -version
-    - docker run --rm blacklabelops/java-8-jre which java
-    - docker run --rm blacklabelops/java-8-jre echo $JAVA_HOME
-    - docker run --rm blacklabelops/java-7-jdk java -version
-    - docker run --rm blacklabelops/java-7-jdk which java
-    - docker run --rm blacklabelops/java-7-jdk echo $JAVA_HOME
-    - docker run --rm blacklabelops/java-8-jdk java -version
-    - docker run --rm blacklabelops/java-8-jdk which java
-    - docker run --rm blacklabelops/java-8-jdk echo $JAVA_HOME
-    - docker run --rm blacklabelops/java-6-jdk java -version
-    - docker run --rm blacklabelops/java-6-jdk which java
-    - docker run --rm blacklabelops/java-6-jdk echo $JAVA_HOME
+    - docker run blacklabelops/java-7-jre java -version
+    - docker run blacklabelops/java-7-jre which java
+    - docker run blacklabelops/java-7-jre sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java-8-jre java -version
+    - docker run blacklabelops/java-8-jre which java
+    - docker run blacklabelops/java-8-jre sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java-7-jdk java -version
+    - docker run blacklabelops/java-7-jdk which java
+    - docker run blacklabelops/java-7-jdk sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java-8-jdk java -version
+    - docker run blacklabelops/java-8-jdk which java
+    - docker run blacklabelops/java-8-jdk sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java-6-jdk java -version
+    - docker run blacklabelops/java-6-jdk which java
+    - docker run blacklabelops/java-6-jdk sh -c 'echo $JAVA_HOME'
