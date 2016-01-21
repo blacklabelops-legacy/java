@@ -1,14 +1,14 @@
 FROM blacklabelops/centos
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
-# this envs are for maintaining java updates.
-ENV JAVA_MAJOR_VERSION=8
-ENV JAVA_UPDATE_VERSION=72
-ENV JAVA_BUILD_NUMER=15
-# install java
-ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
-ENV JAVA_HOME=/opt/java/jdk${JAVA_VERSION}
+# envs for maintaining java updates
+ENV JAVA_MAJOR_VERSION=8 \
+    JAVA_UPDATE_VERSION=72 \
+    JAVA_BUILD_NUMER=15 \
+    JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION} \
+    JAVA_HOME=/opt/java/jdk${JAVA_VERSION}
 
+# install java
 RUN yum install -y \
     tar \
     wget && \
