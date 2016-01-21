@@ -4,9 +4,9 @@ MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 # envs for maintaining java updates
 ENV JAVA_MAJOR_VERSION=8 \
     JAVA_UPDATE_VERSION=72 \
-    JAVA_BUILD_NUMER=15 \
-    JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION} \
-    JAVA_HOME=/opt/java/jdk${JAVA_VERSION}
+    JAVA_BUILD_NUMER=15
+ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
+ENV JAVA_HOME=/opt/java/jdk${JAVA_VERSION}
 
 COPY www.oracle.com.crt /etc/pki/ca-trust/source/anchors/
 
