@@ -24,13 +24,13 @@ Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://ww
 
 * [![blacklabelops/java-jre-7:alpine](https://badge.imagelayers.io/blacklabelops/java-jre-7:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-7:alpine 'blacklabelops/java-jre-7:alpine')
 
-[blacklabelops/java-jdk-7:alpine](https://hub.docker.com/r/java-jdk-7/)
+[blacklabelops/java-jdk-7:alpine](https://hub.docker.com/r/blacklabelops/java-jdk-7/)
 
-* [![java-jdk-7:alpine](https://badge.imagelayers.io/java-jdk-7:alpine.svg)](https://imagelayers.io/?images=java-jdk-7:alpine 'java-jdk-7:alpine')
+* [![jblacklabelops/java-jdk-7:alpine](https://badge.imagelayers.io/blacklabelops/java-jdk-7:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-7:alpine 'blacklabelops/java-jdk-7:alpine')
 
-[blacklabelops/java-jdk-6:alpine](https://hub.docker.com/r/java-jdk-6/)
+[blacklabelops/java-jdk-6:alpine](https://hub.docker.com/r/blacklabelops/java-jdk-6/)
 
-* [![java-jdk-6:alpine](https://badge.imagelayers.io/java-jdk-6:alpine.svg)](https://imagelayers.io/?images=java-jdk-6:alpine 'java-jdk-6:alpine')
+* [![blacklabelops/java-jdk-6:alpine](https://badge.imagelayers.io/blacklabelops/java-jdk-6:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-6:alpine 'blacklabelops/java-jdk-6:alpine')
 
 # CentOS Images
 
