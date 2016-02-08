@@ -4,29 +4,55 @@
 
 These are base containers for maintaining the Java Version.
 
+NEW: Reduced size Alpine Images!
+
 Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://www.hipchat.com/geogBFvEM)
 
 # Docker Hub & Docker Registry
 
-[blacklabelops/java-jre-7](https://hub.docker.com/r/blacklabelops/java-jre-7/)
+# Alpine Images
 
-* [Imagelayers.io](https://imagelayers.io/?images=blacklabelops/java-jre-7:latest 'Get your own badge on imagelayers.io')
+[blacklabelops/java-jre-8:alpine](https://hub.docker.com/r/blacklabelops/java-jre-8/)
+
+* [![blacklabelops/java-jre-8:alpine](https://badge.imagelayers.io/blacklabelops/java-jre-8:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-8:alpine 'blacklabelops/java-jre-8:alpine')
+
+[blacklabelops/java-jdk-8:alpine](https://hub.docker.com/r/blacklabelops/java-jdk-8/)
+
+* [![blacklabelops/java-jdk-8:alpine](https://badge.imagelayers.io/blacklabelops/java-jdk-8:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-8:alpine 'blacklabelops/java-jdk-8:alpine')
+
+[blacklabelops/java-jre-7:alpine](https://hub.docker.com/r/blacklabelops/java-jre-7/)
+
+* [![blacklabelops/java-jre-7:alpine](https://badge.imagelayers.io/blacklabelops/java-jre-7:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-7:alpine 'blacklabelops/java-jre-7:alpine')
+
+[blacklabelops/java-jdk-7:alpine](https://hub.docker.com/r/java-jdk-7/)
+
+* [![java-jdk-7:alpine](https://badge.imagelayers.io/java-jdk-7:alpine.svg)](https://imagelayers.io/?images=java-jdk-7:alpine 'java-jdk-7:alpine')
+
+[blacklabelops/java-jdk-6:alpine](https://hub.docker.com/r/java-jdk-6/)
+
+* [![java-jdk-6:alpine](https://badge.imagelayers.io/java-jdk-6:alpine.svg)](https://imagelayers.io/?images=java-jdk-6:alpine 'java-jdk-6:alpine')
+
+# CentOS Images
 
 [blacklabelops/java-jre-8](https://hub.docker.com/r/blacklabelops/java-jre-8/)
 
-* [Imagelayers.io](https://imagelayers.io/?images=blacklabelops/java-jre-8:latest 'Get your own badge on imagelayers.io')
-
-[blacklabelops/java-jdk-6](https://hub.docker.com/r/blacklabelops/java-jdk-6/)
-
-* [Imagelayers.io](https://imagelayers.io/?images=blacklabelops/java-jdk-6:latest 'Get your own badge on imagelayers.io')
-
-[blacklabelops/java-jdk-7](https://hub.docker.com/r/blacklabelops/java-jdk-7/)
-
-* [Imagelayers.io](https://imagelayers.io/?images=blacklabelops/java-jdk-7:latest 'Get your own badge on imagelayers.io')
+* [![blacklabelops/java-jre-8](https://badge.imagelayers.io/blacklabelops/java-jre-8:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-8:latest 'blacklabelops/java-jre-8')
 
 [blacklabelops/java-jdk-8](https://hub.docker.com/r/blacklabelops/java-jdk-8/)
 
-* [Imagelayers.io](https://imagelayers.io/?images=blacklabelops/java-jdk-8:latest 'Get your own badge on imagelayers.io')
+* [![blacklabelops/java-jdk-8](https://badge.imagelayers.io/blacklabelops/java-jdk-8:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-8:latest 'blacklabelops/java-jdk-8')
+
+[blacklabelops/java-jre-7](https://hub.docker.com/r/blacklabelops/java-jre-7/)
+
+* [![blacklabelops/java-jre-7](https://badge.imagelayers.io/blacklabelops/java-jre-7:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-7:latest 'blacklabelops/java-jre-7')
+
+[blacklabelops/java-jdk-7](https://hub.docker.com/r/blacklabelops/java-jdk-7/)
+
+* [![blacklabelops/java-jdk-7](https://badge.imagelayers.io/blacklabelops/java-jdk-7:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-7:latest 'blacklabelops/java-jdk-7')
+
+[blacklabelops/java-jdk-6](https://hub.docker.com/r/blacklabelops/java-jdk-6/)
+
+* [![blacklabelops/java-jdk-6](https://badge.imagelayers.io/blacklabelops/java-jdk-6:latest.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-6:latest 'blacklabelops/java-jdk-6')
 
 # Github
 
