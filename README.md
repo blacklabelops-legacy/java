@@ -26,10 +26,10 @@
 
 | Java Version | Tag | Dockerfile | Size |
 |--------------|-----|------------|------|
-| Java JRE 8 | openjre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjre-8-alpine/Dockerfile) | |
-| Java JRE 7 | openjre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjre-7-alpine/Dockerfile) | |
-| Java JDK 8 | openjdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk-8-alpine/Dockerfile) | |
-| Java JDK 7 | openjdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk-7-alpine/Dockerfile) | |
+| Java JRE 8 | openjre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjre-8-alpine/Dockerfile) | [![blacklabelops/java:openjre8](https://badge.imagelayers.io/blacklabelops/java:openjre8.svg)](https://imagelayers.io/?images=blacklabelops/java:openjre8 'blacklabelops/java:openjre8') |
+| Java JRE 7 | openjre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjre-7-alpine/Dockerfile) | [![blacklabelops/java:openjre7](https://badge.imagelayers.io/blacklabelops/java:openjre7.svg)](https://imagelayers.io/?images=blacklabelops/java:openjre7 'blacklabelops/java:openjre7') |
+| Java JDK 8 | openjdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk-8-alpine/Dockerfile) | [![blacklabelops/java:openjdk8](https://badge.imagelayers.io/blacklabelops/java:openjdk8.svg)](https://imagelayers.io/?images=blacklabelops/java:openjdk8 'blacklabelops/java:openjdk8') |
+| Java JDK 7 | openjdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk-7-alpine/Dockerfile) | [![blacklabelops/java:openjdk7](https://badge.imagelayers.io/blacklabelops/java:openjdk7.svg)](https://imagelayers.io/?images=blacklabelops/java:openjdk7 'blacklabelops/java:openjdk7') |
 
 # Make It Short
 
