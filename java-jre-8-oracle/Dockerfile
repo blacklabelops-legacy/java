@@ -11,8 +11,8 @@ COPY www.oracle.com.crt /etc/pki/ca-trust/source/anchors/
 
 # envs for maintaining java updates
 ENV JAVA_MAJOR_VERSION=8 \
-    JAVA_UPDATE_VERSION=72 \
-    JAVA_BUILD_NUMER=15
+    JAVA_UPDATE_VERSION=74 \
+    JAVA_BUILD_NUMER=02
 ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
 ENV JAVA_HOME=/opt/java/jre${JAVA_VERSION}
 
