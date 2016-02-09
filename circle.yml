@@ -37,7 +37,7 @@ test:
     - docker run blacklabelops/java:centos.jdk6 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jre7 java -version
     - docker run blacklabelops/java:jre7 which java
-    - docker run blacklabelops/java:jre7 -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:jre7 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jre8 java -version
     - docker run blacklabelops/java:jre8 which java
     - docker run blacklabelops/java:jre8 sh -c 'echo $JAVA_HOME'
