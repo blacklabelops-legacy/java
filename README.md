@@ -6,21 +6,30 @@
 
 | Java Version | Tag          | Dockerfile | Size |
 |--------------|--------------|------------|------|
-| Java JRE 8   | jre8, latest | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-8-oracle-alpine/Dockerfile) | [![blacklabelops/java-jre-8:alpine](https://badge.imagelayers.io/blacklabelops/java-jre-8:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-8:alpine 'blacklabelops/java-jre-8:alpine') |
-| Java JRE 7   | jre7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-7-oracle-alpine/Dockerfile) | [![blacklabelops/java-jre-7:alpine](https://badge.imagelayers.io/blacklabelops/java-jre-7:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-7:alpine 'blacklabelops/java-jre-7:alpine') |
-| Java JDK 8   | jdk8         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-8-oracle-alpine/Dockerfile) | [![blacklabelops/java-jdk-8:alpine](https://badge.imagelayers.io/blacklabelops/java-jdk-8:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-8:alpine 'blacklabelops/java-jdk-8:alpine') |
-| Java JDK 7   | jdk7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-7-oracle-alpine/Dockerfile) | [![blacklabelops/java-jdk-7:alpine](https://badge.imagelayers.io/blacklabelops/java-jdk-7:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-7:alpine 'blacklabelops/java-jdk-7:alpine') |
-| Java JDK 6   | jdk6         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-6-oracle-alpine/Dockerfile) | [![blacklabelops/java-jdk-6:alpine](https://badge.imagelayers.io/blacklabelops/java-jdk-6:alpine.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-6:alpine 'blacklabelops/java-jdk-6:alpine') |
+| Java JRE 8   | jre8, latest | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-8-oracle-alpine/Dockerfile) | [![blacklabelops/java:jre8](https://badge.imagelayers.io/blacklabelops/java:jre8.svg)](https://imagelayers.io/?images=blacklabelops/java:jre8 'blacklabelops/java:jre8') |
+| Java JRE 7   | jre7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-7-oracle-alpine/Dockerfile) | [![blacklabelops/java:jre7](https://badge.imagelayers.io/blacklabelops/java:jre7.svg)](https://imagelayers.io/?images=blacklabelops/java:jre7 'blacklabelops/java:jre7') |
+| Java JDK 8   | jdk8         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-8-oracle-alpine/Dockerfile) | [![blacklabelops/java:jdk8](https://badge.imagelayers.io/blacklabelops/java:jdk8.svg)](https://imagelayers.io/?images=blacklabelops/java:jdk8 'blacklabelops/java:jdk8') |
+| Java JDK 7   | jdk7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-7-oracle-alpine/Dockerfile) | [![blacklabelops/java:jdk7](https://badge.imagelayers.io/blacklabelops/java:jdk7.svg)](https://imagelayers.io/?images=blacklabelops/java:jdk7 'blacklabelops/java:jdk7') |
+| Java JDK 6   | jdk6         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-6-oracle-alpine/Dockerfile) | [![blacklabelops/java:jdk6](https://badge.imagelayers.io/blacklabelops/java:jdk6.svg)](https://imagelayers.io/?images=blacklabelops/java:jdk6 'blacklabelops/java:jdk6') |
 
 ## Supported CentOS Images
 
 | Java Version | Tag | Dockerfile | Size |
 |--------------|-----|------------|------|
-| Java JRE 8 | centos.jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-8-oracle/Dockerfile) | [![blacklabelops/java-jre-8](https://badge.imagelayers.io/blacklabelops/java-jre-8.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-8 'blacklabelops/java-jre-8') |
-| Java JRE 7 | centos.jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-7-oracle/Dockerfile) | [![blacklabelops/java-jre-7](https://badge.imagelayers.io/blacklabelops/java-jre-7.svg)](https://imagelayers.io/?images=blacklabelops/java-jre-7 'blacklabelops/java-jre-7') |
-| Java JDK 8 | centos.jdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-8-oracle/Dockerfile) | [![blacklabelops/java-jdk-8](https://badge.imagelayers.io/blacklabelops/java-jdk-8.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-8 'blacklabelops/java-jdk-8') |
-| Java JDK 7 | centos.jdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-7-oracle/Dockerfile) | [![blacklabelops/java-jdk-7](https://badge.imagelayers.io/blacklabelops/java-jdk-7.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-7 'blacklabelops/java-jdk-7') |
-| Java JDK 6 | centos.jdk6 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-6-oracle/Dockerfile) | [![blacklabelops/java-jdk-6](https://badge.imagelayers.io/blacklabelops/java-jdk-6.svg)](https://imagelayers.io/?images=blacklabelops/java-jdk-6 'blacklabelops/java-jdk-6') |
+| Java JRE 8 | centos.jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-8-oracle/Dockerfile) | [![blacklabelops/java:centos.jre8](https://badge.imagelayers.io/blacklabelops/java:centos.jre8.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jre8 'blacklabelops/java:centos.jre8') |
+| Java JRE 7 | centos.jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jre-7-oracle/Dockerfile) | [![blacklabelops/java:centos.jre7](https://badge.imagelayers.io/blacklabelops/java:centos.jre7.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jre7 'blacklabelops/java:centos.jre7') |
+| Java JDK 8 | centos.jdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-8-oracle/Dockerfile) | [![blacklabelops/java:centos.jdk8](https://badge.imagelayers.io/blacklabelops/java:centos.jdk8.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jdk8 'blacklabelops/java:centos.jdk8') |
+| Java JDK 7 | centos.jdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-7-oracle/Dockerfile) | [![blacklabelops/java:centos.jdk7](https://badge.imagelayers.io/blacklabelops/java:centos.jdk7.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jdk7 'blacklabelops/java:centos.jdk7') |
+| Java JDK 6 | centos.jdk6 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-6-oracle/Dockerfile) | [![blacklabelops/java:centos.jdk6](https://badge.imagelayers.io/blacklabelops/java:centos.jdk6.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jdk6 'blacklabelops/java:centos.jdk6') |
+
+## Supported OpenJDK Images
+
+| Java Version | Tag | Dockerfile | Size |
+|--------------|-----|------------|------|
+| Java JRE 8 | openjre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjre-8-alpine/Dockerfile) | |
+| Java JRE 7 | openjre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjre-7-alpine/Dockerfile) | |
+| Java JDK 8 | openjdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk-8-alpine/Dockerfile) | |
+| Java JDK 7 | openjdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk-7-alpine/Dockerfile) | |
 
 # Make It Short
 

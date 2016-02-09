@@ -56,6 +56,17 @@ test:
     - docker run blacklabelops/java:jdk6 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:openjre7 java -version
     - docker run blacklabelops/java:openjre7 which java
-    - docker run blacklabelops/java:openjre7 javac -version
-    - docker run blacklabelops/java:openjre7 which javac
     - docker run blacklabelops/java:openjre7 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:openjre8 java -version
+    - docker run blacklabelops/java:openjre8 which java
+    - docker run blacklabelops/java:openjre8 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:openjdk8 java -version
+    - docker run blacklabelops/java:openjdk8 which java
+    - docker run blacklabelops/java:openjdk8 javac -version
+    - docker run blacklabelops/java:openjdk8 which javac
+    - docker run blacklabelops/java:openjdk8 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:openjdk7 java -version
+    - docker run blacklabelops/java:openjdk7 which java
+    - docker run blacklabelops/java:openjdk7 javac -version
+    - docker run blacklabelops/java:openjdk7 which javac
+    - docker run blacklabelops/java:openjdk7 sh -c 'echo $JAVA_HOME'
