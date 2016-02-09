@@ -6,26 +6,47 @@ dependencies:
   override:
     - docker version
     - docker info
-    - docker build -t="blacklabelops/java-7-jre" -f ./java-jre-7-oracle/Dockerfile java-jre-7-oracle/
-    - docker build -t="blacklabelops/java-8-jre" -f ./java-jre-8-oracle/Dockerfile java-jre-8-oracle/
-    - docker build -t="blacklabelops/java-7-jdk" -f ./java-jdk-7-oracle/Dockerfile java-jdk-7-oracle/
-    - docker build -t="blacklabelops/java-8-jdk" -f ./java-jdk-8-oracle/Dockerfile java-jdk-8-oracle/
-    - docker build -t="blacklabelops/java-6-jdk" -f ./java-jdk-6-oracle/Dockerfile java-jdk-6-oracle/
+    - docker build -t blacklabelops/java:centos.jre7 -f ./java-jre-7-oracle/Dockerfile java-jre-7-oracle/
+    - docker build -t blacklabelops/java:centos.jre8 -f ./java-jre-8-oracle/Dockerfile java-jre-8-oracle/
+    - docker build -t blacklabelops/java:centos.jdk7 -f ./java-jdk-7-oracle/Dockerfile java-jdk-7-oracle/
+    - docker build -t blacklabelops/java:centos.jdk8 -f ./java-jdk-8-oracle/Dockerfile java-jdk-8-oracle/
+    - docker build -t blacklabelops/java:centos.jdk6 -f ./java-jdk-6-oracle/Dockerfile java-jdk-6-oracle/
+    - docker build -t blacklabelops/java:jre7 -f ./java-jre-7-oracle-alpine/Dockerfile java-jre-7-oracle-alpine/
+    - docker build -t blacklabelops/java:jre8 -f ./java-jre-8-oracle-alpine/Dockerfile java-jre-8-oracle-alpine/
+    - docker build -t blacklabelops/java:jdk7 -f ./java-jdk-7-oracle-alpine/Dockerfile java-jdk-7-oracle-alpine/
+    - docker build -t blacklabelops/java:jdk8 -f ./java-jdk-8-oracle-alpine/Dockerfile java-jdk-8-oracle-alpine/
+    - docker build -t blacklabelops/java:jdk6 -f ./java-jdk-6-oracle-alpine/Dockerfile java-jdk-6-oracle-alpine/
+
 
 test:
   override:
-    - docker run blacklabelops/java-7-jre java -version
-    - docker run blacklabelops/java-7-jre which java
-    - docker run blacklabelops/java-7-jre sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java-8-jre java -version
-    - docker run blacklabelops/java-8-jre which java
-    - docker run blacklabelops/java-8-jre sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java-7-jdk java -version
-    - docker run blacklabelops/java-7-jdk which java
-    - docker run blacklabelops/java-7-jdk sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java-8-jdk java -version
-    - docker run blacklabelops/java-8-jdk which java
-    - docker run blacklabelops/java-8-jdk sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java-6-jdk java -version
-    - docker run blacklabelops/java-6-jdk which java
-    - docker run blacklabelops/java-6-jdk sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:centos.jre7 java -version
+    - docker run blacklabelops/java:centos.jre7 which java
+    - docker run blacklabelops/java:centos.jre7 -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:centos.jre8 java -version
+    - docker run blacklabelops/java:centos.jre8 which java
+    - docker run blacklabelops/java:centos.jre8 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:centos.jdk7 java -version
+    - docker run blacklabelops/java:centos.jdk7 which java
+    - docker run blacklabelops/java:centos.jdk7 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:centos.jdk8 java -version
+    - docker run blacklabelops/java:centos.jdk8 which java
+    - docker run blacklabelops/java:centos.jdk8 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:centos.jdk6 java -version
+    - docker run blacklabelops/java:centos.jdk6 which java
+    - docker run blacklabelops/java:centos.jdk6 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:jre7 java -version
+    - docker run blacklabelops/java:jre7 which java
+    - docker run blacklabelops/java:jre7 -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:jre8 java -version
+    - docker run blacklabelops/java:jre8 which java
+    - docker run blacklabelops/java:jre8 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:jdk7 java -version
+    - docker run blacklabelops/java:jdk7 which java
+    - docker run blacklabelops/java:jdk7 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:jdk8 java -version
+    - docker run blacklabelops/java:jdk8 which java
+    - docker run blacklabelops/java:jdk8 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:jdk6 java -version
+    - docker run blacklabelops/java:jdk6 which java
+    - docker run blacklabelops/java:jdk6 sh -c 'echo $JAVA_HOME'
