@@ -22,7 +22,7 @@ test:
   override:
     - docker run blacklabelops/java:centos.jre7 java -version
     - docker run blacklabelops/java:centos.jre7 which java
-    - docker run blacklabelops/java:centos.jre7 -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:centos.jre7 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:centos.jre8 java -version
     - docker run blacklabelops/java:centos.jre8 which java
     - docker run blacklabelops/java:centos.jre8 sh -c 'echo $JAVA_HOME'
