@@ -16,6 +16,10 @@ dependencies:
     - docker build -t blacklabelops/java:jdk7 -f ./java-jdk-7-oracle-alpine/Dockerfile java-jdk-7-oracle-alpine/
     - docker build -t blacklabelops/java:jdk8 -f ./java-jdk-8-oracle-alpine/Dockerfile java-jdk-8-oracle-alpine/
     - docker build -t blacklabelops/java:jdk6 -f ./java-jdk-6-oracle-alpine/Dockerfile java-jdk-6-oracle-alpine/
+    - docker build -t blacklabelops/java:openjre7 -f ./java-openjre-7-alpine/Dockerfile java-openjre-7-alpine/
+    - docker build -t blacklabelops/java:openjre8 -f ./java-openjre-8-alpine/Dockerfile java-openjre-8-alpine/
+    - docker build -t blacklabelops/java:openjdk7 -f ./java-openjdk-7-alpine/Dockerfile java-openjdk-7-alpine/
+    - docker build -t blacklabelops/java:openjdk8 -f ./java-openjdk-8-alpine/Dockerfile java-openjdk-8-alpine/
 
 
 test:
@@ -50,3 +54,8 @@ test:
     - docker run blacklabelops/java:jdk6 java -version
     - docker run blacklabelops/java:jdk6 which java
     - docker run blacklabelops/java:jdk6 sh -c 'echo $JAVA_HOME'
+    - docker run blacklabelops/java:openjre7 java -version
+    - docker run blacklabelops/java:openjre7 which java
+    - docker run blacklabelops/java:openjre7 javac -version
+    - docker run blacklabelops/java:openjre7 which javac
+    - docker run blacklabelops/java:openjre7 sh -c 'echo $JAVA_HOME'
