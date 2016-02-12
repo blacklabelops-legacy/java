@@ -31,12 +31,15 @@ test:
     - docker run blacklabelops/java:centos.jre8 which java
     - docker run blacklabelops/java:centos.jre8 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:centos.jdk7 java -version
+    - docker run blacklabelops/java:centos.jdk7 javac -version
     - docker run blacklabelops/java:centos.jdk7 which java
     - docker run blacklabelops/java:centos.jdk7 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:centos.jdk8 java -version
+    - docker run blacklabelops/java:centos.jdk8 javac -version
     - docker run blacklabelops/java:centos.jdk8 which java
     - docker run blacklabelops/java:centos.jdk8 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:centos.jdk6 java -version
+    - docker run blacklabelops/java:centos.jdk6 javac -version
     - docker run blacklabelops/java:centos.jdk6 which java
     - docker run blacklabelops/java:centos.jdk6 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jre7 java -version
@@ -46,12 +49,15 @@ test:
     - docker run blacklabelops/java:jre8 which java
     - docker run blacklabelops/java:jre8 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jdk7 java -version
+    - docker run blacklabelops/java:jdk7 javac -version
     - docker run blacklabelops/java:jdk7 which java
     - docker run blacklabelops/java:jdk7 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jdk8 java -version
+    - docker run blacklabelops/java:jdk8 javac -version
     - docker run blacklabelops/java:jdk8 which java
     - docker run blacklabelops/java:jdk8 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jdk6 java -version
+    - docker run blacklabelops/java:jdk6 javac -version
     - docker run blacklabelops/java:jdk6 which java
     - docker run blacklabelops/java:jdk6 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:openjre7 java -version
