@@ -1,9 +1,9 @@
-FROM blacklabelops/alpine:3.3
+FROM blacklabelops/alpine
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 RUN export JAVA_MAJOR_VERSION=8 && \
-    export JAVA_MINOR_VERSION=66 && \
-    export JAVA_BUILD_VERION=17-r2 && \
+    export JAVA_MINOR_VERSION=latest && \
+    export JAVA_BUILD_VERION= && \
     export JAVA_VERSION=${JAVA_MAJOR_VERSION}.${JAVA_MINOR_VERSION}.${JAVA_BUILD_VERION} && \
     if  [ "${JAVA_MINOR_VERSION}" = "latest" ]; \
       then apk add --update openjdk${JAVA_MAJOR_VERSION} ; \
