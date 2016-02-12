@@ -1,4 +1,4 @@
-FROM blacklabelops/alpine
+FROM blacklabelops/alpine:3.3
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # envs for maintaining java updates

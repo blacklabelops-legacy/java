@@ -1,4 +1,4 @@
-FROM blacklabelops/centos
+FROM blacklabelops/centos:7.2.1511
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # envs for maintaining java updates
