@@ -19,9 +19,6 @@ RUN export JAVA_TARBALL=jre-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-linux-x
     apk add --allow-untrusted /tmp/glibc-2.22-r8.apk && \
     wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.22-r8/glibc-bin-2.22-r8.apk && \
     apk add --allow-untrusted /tmp/glibc-bin-2.22-r8.apk && \
-    wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.22-r8/glibc-i18n-2.22-r8.apk && \
-    apk add --allow-untrusted /tmp/glibc-i18n-2.22-r8.apk && \
-    /usr/glibc-compat/bin/localedef -i en_US -f UTF-8 en_US.UTF-8 && \
     # Install oracle java
     wget --directory-prefix=/tmp \
          --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
