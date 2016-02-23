@@ -5,14 +5,27 @@ machine:
   services:
     - docker
 
+  environment:
+     ORACLE_6_JAVA_MAJOR_VERSION: 6
+     ORACLE_6_JAVA_UPDATE_VERSION: 45
+     ORACLE_6_JAVA_BUILD_NUMBER: 06
+
+     ORACLE_7_JAVA_MAJOR_VERSION: 7
+     ORACLE_7_JAVA_UPDATE_VERSION: 80
+     ORACLE_7_JAVA_BUILD_NUMBER: 15
+
+     ORACLE_8_JAVA_MAJOR_VERSION: 8
+     ORACLE_8_JAVA_UPDATE_VERSION: 74
+     ORACLE_8_JAVA_BUILD_NUMBER: 02
+
 dependencies:
   override:
     - docker version
     - docker info
-    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
-    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
-    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
-    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
 
 test:
   override:
