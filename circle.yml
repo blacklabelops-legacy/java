@@ -6,22 +6,29 @@ machine:
     - docker
 
   environment:
-     ORACLE_6_JAVA_MAJOR_VERSION: 6
-     ORACLE_6_JAVA_UPDATE_VERSION: 45
+     ORACLE_6_JAVA_MAJOR_VERSION: '6'
+     ORACLE_6_JAVA_UPDATE_VERSION: '45'
      ORACLE_6_JAVA_BUILD_NUMBER: '06'
 
-     ORACLE_7_JAVA_MAJOR_VERSION: 7
-     ORACLE_7_JAVA_UPDATE_VERSION: 80
-     ORACLE_7_JAVA_BUILD_NUMBER: 15
+     ORACLE_7_JAVA_MAJOR_VERSION: '7'
+     ORACLE_7_JAVA_UPDATE_VERSION: '80'
+     ORACLE_7_JAVA_BUILD_NUMBER: '15'
 
-     ORACLE_8_JAVA_MAJOR_VERSION: 8
-     ORACLE_8_JAVA_UPDATE_VERSION: 74
+     ORACLE_8_JAVA_MAJOR_VERSION: '8'
+     ORACLE_8_JAVA_UPDATE_VERSION: '74'
      ORACLE_8_JAVA_BUILD_NUMBER: '02'
 
 dependencies:
   override:
     - docker version
     - docker info
+    # JDK 8
+    - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk8 jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jdk8 jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+
+    # JDK 6
     - ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
@@ -29,11 +36,8 @@ dependencies:
 
 test:
   override:
-    - docker run blacklabelops/java:centos.jdk6 java -version
-    - docker run blacklabelops/java:centos.jdk6 javac -version
-    - docker run blacklabelops/java:centos.jdk6 which java
-    - docker run blacklabelops/java:centos.jdk6 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:jdk6 java -version
-    - docker run blacklabelops/java:jdk6 javac -version
-    - docker run blacklabelops/java:jdk6 which java
-    - docker run blacklabelops/java:jdk6 sh -c 'echo $JAVA_HOME'
+    # JDK 6
+    - ./buildscripts/testImage.sh centos.jdk6 jdk
+    - ./buildscripts/testImage.sh centos.jdk6.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk
+    - ./buildscripts/testImage.sh jdk6 jdk
+    - ./buildscripts/testImage.sh jdk6.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk
