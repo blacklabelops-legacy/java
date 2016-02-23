@@ -54,6 +54,30 @@ dependencies:
 
 test:
   override:
+    # JDK 8
+    - ./buildscripts/testImage.sh centos.jdk8 jdk true
+    - ./buildscripts/testImage.sh centos.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true
+    - ./buildscripts/testImage.sh jdk8 jdk true
+    - ./buildscripts/testImage.sh jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true
+
+    # JRE 8
+    - ./buildscripts/testImage.sh centos.jre8 jre true
+    - ./buildscripts/testImage.sh centos.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
+    - ./buildscripts/testImage.sh jre8 jre true
+    - ./buildscripts/testImage.sh jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
+
+    # JDK 7
+    - ./buildscripts/testImage.sh centos.jdk7 jdk true
+    - ./buildscripts/testImage.sh centos.jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk true
+    - ./buildscripts/testImage.sh jdk7 jdk true
+    - ./buildscripts/testImage.sh jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk true
+
+    # JRE 7
+    - ./buildscripts/testImage.sh centos.jre7 jre true
+    - ./buildscripts/testImage.sh centos.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
+    - ./buildscripts/testImage.sh jre7 jre true
+    - ./buildscripts/testImage.sh jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
+
     # JDK 6
     - ./buildscripts/testImage.sh centos.jdk6 jdk
     - ./buildscripts/testImage.sh centos.jdk6.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk
