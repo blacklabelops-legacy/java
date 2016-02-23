@@ -1,4 +1,4 @@
-FROM blacklabelops/centos
+FROM blacklabelops/centos:7.2.1511
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # build parameters
@@ -18,7 +18,7 @@ RUN yum install -y \
     export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-linux-x64.bin && \
     wget --directory-prefix=/tmp \
          --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
-         http://download.oracle.com/otn-pub/java/${JAVA_DISTRIBUTION}/${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-b${JAVA_BUILD_NUMBER}/${JAVA_TARBALL} && \
+         http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-b${JAVA_BUILD_NUMBER}/${JAVA_TARBALL} && \
     mkdir -p /opt/java && \
     chmod +x /tmp/${JAVA_TARBALL} && \
     /tmp/${JAVA_TARBALL} && \

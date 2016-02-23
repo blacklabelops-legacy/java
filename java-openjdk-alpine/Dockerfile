@@ -1,13 +1,22 @@
 FROM blacklabelops/alpine
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
+ARG JAVA_DISTRIBUTION=jdk
+ARG JAVA_MAJOR_VERSION=8
+ARG JAVA_MINOR_VERSION=latest
+ARG JAVA_BUILD_VERION=
+
 RUN export JAVA_MAJOR_VERSION=8 && \
     export JAVA_MINOR_VERSION=latest && \
     export JAVA_BUILD_VERION= && \
+    if  [ "${JAVA_DISTRIBUTION}" = "jre" ]; \
+      then export JAVA_PACKAGE_POSTFIX_VERSION=-jre ; \
+      else export JAVA_PACKAGE_POSTFIX_VERSION= ; \
+    fi && \
     export JAVA_VERSION=${JAVA_MAJOR_VERSION}.${JAVA_MINOR_VERSION}.${JAVA_BUILD_VERION} && \
     if  [ "${JAVA_MINOR_VERSION}" = "latest" ]; \
-      then apk add --update openjdk${JAVA_MAJOR_VERSION} ; \
-      else apk add --update "openjdk${JAVA_MAJOR_VERSION}=${JAVA_VERSION}" ; \
+      then apk add --update openjdk${JAVA_MAJOR_VERSION}${JAVA_PACKAGE_POSTFIX_VERSION} ; \
+      else apk add --update "openjdk${JAVA_MAJOR_VERSION}${JAVA_PACKAGE_POSTFIX_VERSION}=${JAVA_VERSION}" ; \
     fi && \
     # Clean caches and tmps
     rm -rf /var/cache/apk/* && \
