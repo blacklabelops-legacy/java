@@ -20,5 +20,5 @@ RUN if  [ "${JAVA_DISTRIBUTION}" = "jre" ]; \
     rm -rf /tmp/* && \
     rm -rf /var/log/*
 
-ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
+ENV JAVA_HOME=/usr/lib/jvm/default-jvm
 ENV PATH=$JAVA_HOME/bin:$PATH
