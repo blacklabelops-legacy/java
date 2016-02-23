@@ -51,7 +51,7 @@ $ docker run blacklabelops/java:jdk7 java -version
 
 > Will print the java version on console.
 
-# How to Extend
+# How-To Extend
 
 Example Dockerfile:
 
@@ -76,6 +76,34 @@ RUN Install-Your-Tooling
 ~~~~
 
 > Will use Java JDK 8 as your base image.
+
+# Build Image
+
+Take a Dockerfile and build with the default arguments:
+
+~~~~
+$ docker build -t blacklabelops/java -f java-oracle-alpine/Dockerfile .
+~~~~
+
+Build a specific Oracle Version with the following build arguments:
+
+* JAVA_DISTRIBUTION: jdk or jre (default: jdk)
+* JAVA_MAJOR_VERSION: 7 or 8
+* JAVA_UPDATE_VERSION: The minor version from any Oracle Java download page.
+* JAVA_BUILD_NUMBER: The build number from any Oracle Java download page.
+
+Example:
+
+~~~~
+$ docker build -t blacklabelops/java \
+  --build-arg JAVA_DISTRIBUTION=jdk \
+  --build-arg JAVA_MAJOR_VERSION=8 \
+  --build-arg JAVA_UPDATE_VERSION=74 \
+  --build-arg JAVA_BUILD_NUMBER=02 \
+  -f java-oracle-alpine/Dockerfile .
+~~~~
+
+> Will build image containing Java JDK 8 in version 8.74.02.
 
 # Support
 
