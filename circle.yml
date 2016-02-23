@@ -1,4 +1,7 @@
 machine:
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+
   services:
     - docker
 
@@ -6,73 +9,18 @@ dependencies:
   override:
     - docker version
     - docker info
-    - docker build -t blacklabelops/java:centos.jre7 -f ./java-jre-7-oracle/Dockerfile java-jre-7-oracle/
-    - docker build -t blacklabelops/java:centos.jre8 -f ./java-jre-8-oracle/Dockerfile java-jre-8-oracle/
-    - docker build -t blacklabelops/java:centos.jdk7 -f ./java-jdk-7-oracle/Dockerfile java-jdk-7-oracle/
-    - docker build -t blacklabelops/java:centos.jdk8 -f ./java-jdk-8-oracle/Dockerfile java-jdk-8-oracle/
-    - docker build -t blacklabelops/java:centos.jdk6 -f ./java-jdk-6-oracle/Dockerfile java-jdk-6-oracle/
-    - docker build -t blacklabelops/java:jre7 -f ./java-jre-7-oracle-alpine/Dockerfile java-jre-7-oracle-alpine/
-    - docker build -t blacklabelops/java:jre8 -f ./java-jre-8-oracle-alpine/Dockerfile java-jre-8-oracle-alpine/
-    - docker build -t blacklabelops/java:jdk7 -f ./java-jdk-7-oracle-alpine/Dockerfile java-jdk-7-oracle-alpine/
-    - docker build -t blacklabelops/java:jdk8 -f ./java-jdk-8-oracle-alpine/Dockerfile java-jdk-8-oracle-alpine/
-    - docker build -t blacklabelops/java:jdk6 -f ./java-jdk-6-oracle-alpine/Dockerfile java-jdk-6-oracle-alpine/
-    - docker build -t blacklabelops/java:openjre7 -f ./java-openjre-7-alpine/Dockerfile java-openjre-7-alpine/
-    - docker build -t blacklabelops/java:openjre8 -f ./java-openjre-8-alpine/Dockerfile java-openjre-8-alpine/
-    - docker build -t blacklabelops/java:openjdk7 -f ./java-openjdk-7-alpine/Dockerfile java-openjdk-7-alpine/
-    - docker build -t blacklabelops/java:openjdk8 -f ./java-openjdk-8-alpine/Dockerfile java-openjdk-8-alpine/
-
+    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
+    - ./buildscripts/release.sh && ./buildscripts/buildImage.sh java-jdk-6-alpine/Dockerfile jdk6.$ORACLE_6_JAVA_MAJOR_VERSION.$ORACLE_6_JAVA_UPDATE_VERSION.$ORACLE_6_JAVA_BUILD_NUMBER jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
 
 test:
   override:
-    - docker run blacklabelops/java:centos.jre7 java -version
-    - docker run blacklabelops/java:centos.jre7 which java
-    - docker run blacklabelops/java:centos.jre7 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:centos.jre8 java -version
-    - docker run blacklabelops/java:centos.jre8 which java
-    - docker run blacklabelops/java:centos.jre8 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:centos.jdk7 java -version
-    - docker run blacklabelops/java:centos.jdk7 javac -version
-    - docker run blacklabelops/java:centos.jdk7 which java
-    - docker run blacklabelops/java:centos.jdk7 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:centos.jdk8 java -version
-    - docker run blacklabelops/java:centos.jdk8 javac -version
-    - docker run blacklabelops/java:centos.jdk8 which java
-    - docker run blacklabelops/java:centos.jdk8 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:centos.jdk6 java -version
     - docker run blacklabelops/java:centos.jdk6 javac -version
     - docker run blacklabelops/java:centos.jdk6 which java
     - docker run blacklabelops/java:centos.jdk6 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:jre7 java -version
-    - docker run blacklabelops/java:jre7 which java
-    - docker run blacklabelops/java:jre7 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:jre8 java -version
-    - docker run blacklabelops/java:jre8 which java
-    - docker run blacklabelops/java:jre8 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:jdk7 java -version
-    - docker run blacklabelops/java:jdk7 javac -version
-    - docker run blacklabelops/java:jdk7 which java
-    - docker run blacklabelops/java:jdk7 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:jdk8 java -version
-    - docker run blacklabelops/java:jdk8 javac -version
-    - docker run blacklabelops/java:jdk8 which java
-    - docker run blacklabelops/java:jdk8 sh -c 'echo $JAVA_HOME'
     - docker run blacklabelops/java:jdk6 java -version
     - docker run blacklabelops/java:jdk6 javac -version
     - docker run blacklabelops/java:jdk6 which java
     - docker run blacklabelops/java:jdk6 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:openjre7 java -version
-    - docker run blacklabelops/java:openjre7 which java
-    - docker run blacklabelops/java:openjre7 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:openjre8 java -version
-    - docker run blacklabelops/java:openjre8 which java
-    - docker run blacklabelops/java:openjre8 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:openjdk8 java -version
-    - docker run blacklabelops/java:openjdk8 which java
-    - docker run blacklabelops/java:openjdk8 javac -version
-    - docker run blacklabelops/java:openjdk8 which javac
-    - docker run blacklabelops/java:openjdk8 sh -c 'echo $JAVA_HOME'
-    - docker run blacklabelops/java:openjdk7 java -version
-    - docker run blacklabelops/java:openjdk7 which java
-    - docker run blacklabelops/java:openjdk7 javac -version
-    - docker run blacklabelops/java:openjdk7 which javac
-    - docker run blacklabelops/java:openjdk7 sh -c 'echo $JAVA_HOME'
