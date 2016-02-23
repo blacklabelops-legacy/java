@@ -22,6 +22,18 @@ dependencies:
   override:
     - docker version
     - docker info
+    # OpenJDK 8
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjdk8 jdk $OPENJDK_8_JAVA_MAJOR_VERSION latest $OPENJDK_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjdk8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jdk $OPENJDK_8_JAVA_MAJOR_VERSION $OPENJDK_8_JAVA_UPDATE_VERSION $OPENJDK_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjre8 jre $OPENJDK_8_JAVA_MAJOR_VERSION latest $OPENJDK_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjre8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jre $OPENJDK_8_JAVA_MAJOR_VERSION $OPENJDK_8_JAVA_UPDATE_VERSION $OPENJDK_8_JAVA_BUILD_NUMBER
+
+    # OpenJDK 7
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjdk7 jdk $OPENJDK_7_JAVA_MAJOR_VERSION latest $OPENJDK_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjdk7.$OPENJDK_7_JAVA_UPDATE_VERSION.$OPENJDK_7_JAVA_BUILD_NUMBER jdk $OPENJDK_7_JAVA_MAJOR_VERSION $OPENJDK_7_JAVA_UPDATE_VERSION $OPENJDK_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjre7 jre $OPENJDK_7_JAVA_MAJOR_VERSION latest $OPENJDK_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-openjdk/Dockerfile openjre7.$OPENJDK_7_JAVA_UPDATE_VERSION.$OPENJDK_7_JAVA_BUILD_NUMBER jre $OPENJDK_7_JAVA_MAJOR_VERSION $OPENJDK_7_JAVA_UPDATE_VERSION $OPENJDK_7_JAVA_BUILD_NUMBER
+
     # JDK 8
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk8 jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
@@ -54,6 +66,18 @@ dependencies:
 
 test:
   override:
+    # OpenJDK 8
+    - ./buildscripts/testImage.sh openjdk8 jdk true
+    - ./buildscripts/testImage.sh openjdk8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jdk true
+    - ./buildscripts/testImage.sh openjre8 jre true
+    - ./buildscripts/testImage.sh openjre8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jre true
+
+    # OpenJDK 7
+    - ./buildscripts/testImage.sh openjdk7 jdk true
+    - ./buildscripts/testImage.sh openjdk7.$OPENJDK_7_JAVA_UPDATE_VERSION.$OPENJDK_7_JAVA_BUILD_NUMBER jdk true
+    - ./buildscripts/testImage.sh openjre7 jre true
+    - ./buildscripts/testImage.sh openjre7.$OPENJDK_7_JAVA_UPDATE_VERSION.$OPENJDK_7_JAVA_BUILD_NUMBER jre true
+
     # JDK 8
     - ./buildscripts/testImage.sh centos.jdk8 jdk true
     - ./buildscripts/testImage.sh centos.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true

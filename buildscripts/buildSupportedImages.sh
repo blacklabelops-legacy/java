@@ -8,6 +8,18 @@ readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 printf '%b\n' ":: Reading release config...."
 source $CUR_DIR/release.sh
 
+# OpenJDK 8
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjdk8 jdk $OPENJDK_8_JAVA_MAJOR_VERSION latest $OPENJDK_8_JAVA_BUILD_NUMBER
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjdk8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jdk $OPENJDK_8_JAVA_MAJOR_VERSION $OPENJDK_8_JAVA_UPDATE_VERSION $OPENJDK_8_JAVA_BUILD_NUMBER
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjre8 jre $OPENJDK_8_JAVA_MAJOR_VERSION latest $OPENJDK_8_JAVA_BUILD_NUMBER
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjre8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jre $OPENJDK_8_JAVA_MAJOR_VERSION $OPENJDK_8_JAVA_UPDATE_VERSION $OPENJDK_8_JAVA_BUILD_NUMBER
+
+# OpenJDK 7
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjdk7 jdk $OPENJDK_7_JAVA_MAJOR_VERSION latest $OPENJDK_7_JAVA_BUILD_NUMBER
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjdk7.$OPENJDK_7_JAVA_UPDATE_VERSION.$OPENJDK_7_JAVA_BUILD_NUMBER jdk $OPENJDK_7_JAVA_MAJOR_VERSION $OPENJDK_7_JAVA_UPDATE_VERSION $OPENJDK_7_JAVA_BUILD_NUMBER
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjre7 jre $OPENJDK_7_JAVA_MAJOR_VERSION latest $OPENJDK_7_JAVA_BUILD_NUMBER
+source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjre7.$OPENJDK_7_JAVA_UPDATE_VERSION.$OPENJDK_7_JAVA_BUILD_NUMBER jre $OPENJDK_7_JAVA_MAJOR_VERSION $OPENJDK_7_JAVA_UPDATE_VERSION $OPENJDK_7_JAVA_BUILD_NUMBER
+
 # JDK 8
 source $CUR_DIR/buildImage.sh java-oracle-alpine/Dockerfile jdk8 jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 source $CUR_DIR/buildImage.sh java-oracle-alpine/Dockerfile jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
@@ -15,6 +27,7 @@ source $CUR_DIR/buildImage.sh java-oracle-centos/Dockerfile centos.jdk8 jdk $ORA
 source $CUR_DIR/buildImage.sh java-oracle-centos/Dockerfile centos.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 
 # JRE 8
+source $CUR_DIR/buildImage.sh java-oracle-alpine/Dockerfile latest jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 source $CUR_DIR/buildImage.sh java-oracle-alpine/Dockerfile jre8 jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 source $CUR_DIR/buildImage.sh java-oracle-alpine/Dockerfile jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 source $CUR_DIR/buildImage.sh java-oracle-centos/Dockerfile centos.jre8 jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
