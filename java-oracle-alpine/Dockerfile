@@ -6,6 +6,7 @@ ARG JAVA_DISTRIBUTION=jdk
 ARG JAVA_MAJOR_VERSION=8
 ARG JAVA_UPDATE_VERSION=74
 ARG JAVA_BUILD_NUMBER=02
+ARG GLIBC_VERSION=2.22-r8
 
 ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
 ENV JAVA_HOME=/opt/java/${JAVA_DISTRIBUTION}${JAVA_VERSION}
@@ -17,10 +18,13 @@ RUN export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE
       ca-certificates \
       wget && \
     # Install latest glibc
-    wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.22-r8/glibc-2.22-r8.apk && \
-    apk add --allow-untrusted /tmp/glibc-2.22-r8.apk && \
-    wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/2.22-r8/glibc-bin-2.22-r8.apk && \
-    apk add --allow-untrusted /tmp/glibc-bin-2.22-r8.apk && \
+    wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-${GLIBC_VERSION}.apk && \
+    apk add --allow-untrusted /tmp/glibc-${GLIBC_VERSION}.apk && \
+    wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-bin-${GLIBC_VERSION}.apk && \
+    apk add --allow-untrusted /tmp/glibc-bin-${GLIBC_VERSION}.apk && \
+    wget --directory-prefix=/tmp https://github.com/andyshinn/alpine-pkg-glibc/releases/download/${GLIBC_VERSION}/glibc-i18n-${GLIBC_VERSION}.apk && \
+    apk --allow-untrusted add /tmp/glibc-i18n-${GLIBC_VERSION}.apk && \
+    /usr/glibc-compat/bin/localedef -i en_US -f UTF-8 en_US.UTF-8 && \
     # Install oracle java
     wget --directory-prefix=/tmp \
          --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
