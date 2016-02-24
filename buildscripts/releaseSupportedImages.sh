@@ -13,7 +13,7 @@ readonly PUSH_REPOSITORY=$1
 function retagImage() {
   local tagname=$1
   local repository=$2
-  docker tag -f blacklabelops/jenkins:$tagname $repository/blacklabelops/jenkins:$tagname
+  docker tag -f blacklabelops/java:$tagname $repository/blacklabelops/java:$tagname
 }
 
 function pushImage() {
