@@ -27,10 +27,10 @@ source $CUR_DIR/testImage.sh jdk8 jdk true
 source $CUR_DIR/testImage.sh jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true
 
 # JRE 8
-source $CUR_DIR/testImage.sh centos.jre8 server-jre true
-source $CUR_DIR/testImage.sh centos.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER server-jre true
-source $CUR_DIR/testImage.sh jre8 server-jre true
-source $CUR_DIR/testImage.sh jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER server-jre true
+source $CUR_DIR/testImage.sh centos.jre8 jre true
+source $CUR_DIR/testImage.sh centos.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
+source $CUR_DIR/testImage.sh jre8 jre true
+source $CUR_DIR/testImage.sh jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
 
 # JDK 7
 source $CUR_DIR/testImage.sh centos.jdk7 jdk true
@@ -39,10 +39,10 @@ source $CUR_DIR/testImage.sh jdk7 jdk true
 source $CUR_DIR/testImage.sh jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk true
 
 # JRE 7
-source $CUR_DIR/testImage.sh centos.jre7 server-jre true
-source $CUR_DIR/testImage.sh centos.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER server-jre true
-source $CUR_DIR/testImage.sh jre7 server-jre true
-source $CUR_DIR/testImage.sh jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER server-jre true
+source $CUR_DIR/testImage.sh centos.jre7 jre true
+source $CUR_DIR/testImage.sh centos.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
+source $CUR_DIR/testImage.sh jre7 jre true
+source $CUR_DIR/testImage.sh jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
 
 # JDK 6
 source $CUR_DIR/testImage.sh centos.jdk6 jdk true
