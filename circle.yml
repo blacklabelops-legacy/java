@@ -47,24 +47,32 @@ dependencies:
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jdk8 jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jdk8 jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 
     # JRE 8
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jre8 jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jre8 jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jre8 jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre $ORACLE_8_JAVA_MAJOR_VERSION $ORACLE_8_JAVA_UPDATE_VERSION $ORACLE_8_JAVA_BUILD_NUMBER
 
     # JDK 7
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk7 jdk $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jdk7 jdk $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jdk7 jdk $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
 
     # JRE 7
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jre7 jre $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-alpine/Dockerfile jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jre7 jre $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
     - ./buildscripts/buildImage.sh java-oracle-centos/Dockerfile centos.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jre7 jre $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
+    - ./buildscripts/buildImage.sh java-oracle-ubuntu/Dockerfile ubuntu.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre $ORACLE_7_JAVA_MAJOR_VERSION $ORACLE_7_JAVA_UPDATE_VERSION $ORACLE_7_JAVA_BUILD_NUMBER
 
     # JDK 6
     - ./buildscripts/buildImage.sh java-jdk-6-centos/Dockerfile centos.jdk6 jdk $ORACLE_6_JAVA_MAJOR_VERSION $ORACLE_6_JAVA_UPDATE_VERSION $ORACLE_6_JAVA_BUILD_NUMBER
@@ -91,24 +99,32 @@ test:
     - ./buildscripts/testImage.sh centos.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true
     - ./buildscripts/testImage.sh jdk8 jdk true
     - ./buildscripts/testImage.sh jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true
+    - ./buildscripts/testImage.sh ubuntu.jdk8 jdk true
+    - ./buildscripts/testImage.sh ubuntu.jdk8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jdk true
 
     # JRE 8
     - ./buildscripts/testImage.sh centos.jre8 jre true
     - ./buildscripts/testImage.sh centos.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
     - ./buildscripts/testImage.sh jre8 jre true
     - ./buildscripts/testImage.sh jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
+    - ./buildscripts/testImage.sh ubuntu.jre8 jre true
+    - ./buildscripts/testImage.sh ubuntu.jre8.$ORACLE_8_JAVA_UPDATE_VERSION.$ORACLE_8_JAVA_BUILD_NUMBER jre true
 
     # JDK 7
     - ./buildscripts/testImage.sh centos.jdk7 jdk true
     - ./buildscripts/testImage.sh centos.jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk true
     - ./buildscripts/testImage.sh jdk7 jdk true
     - ./buildscripts/testImage.sh jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk true
+    - ./buildscripts/testImage.sh ubuntu.jdk7 jdk true
+    - ./buildscripts/testImage.sh ubuntu.jdk7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jdk true
 
     # JRE 7
     - ./buildscripts/testImage.sh centos.jre7 jre true
     - ./buildscripts/testImage.sh centos.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
     - ./buildscripts/testImage.sh jre7 jre true
     - ./buildscripts/testImage.sh jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
+    - ./buildscripts/testImage.sh ubuntu.jre7 jre true
+    - ./buildscripts/testImage.sh ubuntu.jre7.$ORACLE_7_JAVA_UPDATE_VERSION.$ORACLE_7_JAVA_BUILD_NUMBER jre true
 
     # JDK 6
     - ./buildscripts/testImage.sh centos.jdk6 jdk
