@@ -22,6 +22,15 @@
 | Java JDK 7 | centos.jdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) | [![blacklabelops/java:centos.jdk7](https://badge.imagelayers.io/blacklabelops/java:centos.jdk7.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jdk7 'blacklabelops/java:centos.jdk7') |
 | Java JDK 6 | centos.jdk6 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) | [![blacklabelops/java:centos.jdk6](https://badge.imagelayers.io/blacklabelops/java:centos.jdk6.svg)](https://imagelayers.io/?images=blacklabelops/java:centos.jdk6 'blacklabelops/java:centos.jdk6') |
 
+## Supported Ubuntu Images
+
+| Java Version | Tag | Dockerfile | Size |
+|--------------|-----|------------|------|
+| Java JRE 8 | ubuntu.jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) | [![blacklabelops/java:ubuntu.jre8](https://badge.imagelayers.io/blacklabelops/java:ubuntu.jre8.svg)](https://imagelayers.io/?images=blacklabelops/java:ubuntu.jre8 'blacklabelops/java:ubuntu.jre8') |
+| Java JRE 7 | ubuntu.jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) | [![blacklabelops/java:ubuntu.jre7](https://badge.imagelayers.io/blacklabelops/java:ubuntu.jre7.svg)](https://imagelayers.io/?images=blacklabelops/java:ubuntu.jre7 'blacklabelops/java:ubuntu.jre7') |
+| Java JDK 8 | ubuntu.jdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) | [![blacklabelops/java:ubuntu.jdk8](https://badge.imagelayers.io/blacklabelops/java:ubuntu.jdk8.svg)](https://imagelayers.io/?images=blacklabelops/java:ubuntu.jdk8 'blacklabelops/java:ubuntu.jdk8') |
+| Java JDK 7 | ubuntu.jdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) | [![blacklabelops/java:ubuntu.jdk7](https://badge.imagelayers.io/blacklabelops/java:ubuntu.jdk7.svg)](https://imagelayers.io/?images=blacklabelops/java:ubuntu.jdk7 'blacklabelops/java:ubuntu.jdk7') |
+
 ## Supported OpenJDK Images
 
 | Java Version | Tag | Dockerfile | Size |
