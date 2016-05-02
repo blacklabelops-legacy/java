@@ -12,8 +12,9 @@ ENV JAVA_HOME=/opt/java/${JAVA_DISTRIBUTION}${JAVA_VERSION}
 ENV PATH=$PATH:$JAVA_HOME/bin
 
 # install java
-RUN apt-get -y install \
-      wget && \
+RUN apt-get update &&
+    apt-get -y install wget && \
+    apt-get -y dist-upgrade && \
     export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-linux-x64.tar.gz && \
     wget --directory-prefix=/tmp \
          --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
