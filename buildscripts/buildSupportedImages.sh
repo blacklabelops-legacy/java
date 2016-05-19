@@ -8,6 +8,10 @@ readonly CUR_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 printf '%b\n' ":: Reading release config...."
 source $CUR_DIR/release.sh
 
+docker pull blacklabelops/centos:7.2.1511
+docker pull blacklabelops/alpine:3.3
+docker pull ubuntu:trusty
+
 # OpenJDK 8
 source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjdk8 jdk $OPENJDK_8_JAVA_MAJOR_VERSION latest $OPENJDK_8_JAVA_BUILD_NUMBER
 source $CUR_DIR/buildImage.sh java-openjdk/Dockerfile openjdk8.$OPENJDK_8_JAVA_UPDATE_VERSION.$OPENJDK_8_JAVA_BUILD_NUMBER jdk $OPENJDK_8_JAVA_MAJOR_VERSION $OPENJDK_8_JAVA_UPDATE_VERSION $OPENJDK_8_JAVA_BUILD_NUMBER
