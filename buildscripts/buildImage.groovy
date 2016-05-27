@@ -21,7 +21,7 @@ def buildJobPullImages(dockerImages) {
 def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,imageargs) {
   for (int i=0;i < imageargs.length;i++) {
     if (!"latest".equals(imageargs[i][0])) {
-      oldTagname = new String(imageargs[i][0])
+      oldTagname = "" + imageargs[i][0]
       echo 'Setting new tagname'
       imageargs[i][0] = oldTagname + "." + imageargs[i][2]
       echo 'Tagname: ' + imageargs[i][0]
