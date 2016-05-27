@@ -40,8 +40,10 @@ def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,ima
 
       echo 'Testing Image'
       if ("jre".equals(imageargs[i][1])) {
+        echo 'Triggering JRE Test'
         testImage(dockerImageName,tagname,branchName,dockerTestCommands.dockerTestCommandsJRE)
       } else {
+        echo 'Triggering JDK Test'
         testImage(dockerImageName,tagname,branchName,dockerTestCommands.dockerTestCommandsJDK)
       }
     } else {
@@ -50,8 +52,10 @@ def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,ima
 
       echo 'Testing Image'
       if ("jre".equals(imageargs[i][1])) {
+        echo 'Triggering JRE Test'
         testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands.dockerTestCommandsJRE)
       } else {
+        echo 'Triggering JDK Test'
         testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands.dockerTestCommandsJDK)
       }
     }
