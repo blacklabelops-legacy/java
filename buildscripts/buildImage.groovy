@@ -38,7 +38,7 @@ def pullImage(imageName) {
 def testImage(imageName, tagName, branchName, dockerCommands) {
   def branchSuffix = branchName?.trim() ? '-' + branchName : ''
   def image = imageName + ':' + tagName + branchSuffix
-  for (int i=0;i < dockerTestCommands.length;i++) {
+  for (int i=0;i < dockerCommands.length;i++) {
     echo 'Testing image: ' + image
     sh 'docker run --rm ' + image + ' ' + dockerCommands[i]
   }
