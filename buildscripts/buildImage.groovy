@@ -46,7 +46,7 @@ def buildImage(dockerWorkspace, imageName, tagName, branchName, buildargs) {
   def branchSuffix = branchName?.trim() ? '-' + branchName : ''
   def image = imageName + ':' + tagName + branchSuffix
   echo 'Building image: ' + image
-  sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[0] + '--build-arg JAVA_MAJOR_VERSION=' + buildargs[1] + '--build-arg JAVA_UPDATE_VERSION=' + buildargs[2] + '--build-arg JAVA_BUILD_NUMBER=' + buildargs[3] + ' -t ' + image + ' .'
+  sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[0] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[1] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[2] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[3] + ' -t ' + image + ' .'
 }
 
 return this;
