@@ -2,15 +2,13 @@
  * Jenkins 2.0 Buildfile
  **/
 
-String tagNameA = "openjdk." + settings.openjdk_8_java_major_version + "." settings.openjdk_8_java_update_version
-
 imageArgs = [
     ["latest",
       "jdk",
       settings.openjdk_8_java_major_version,
       settings.openjdk_8_java_update_version,
       settings.openjdk_8_java_build_number],
-    [ tagNameA,
+    [ "openjdk",
       "jdk",
       settings.openjdk_8_java_major_version,
       settings.openjdk_8_java_update_version,
