@@ -10,7 +10,7 @@
 node('docker') {
     checkout scm
     job = load 'buildscripts/buildImage.groovy'
-    //settings = load 'buildscripts/settings.groovy'
+    settings = load 'buildscripts/settings.groovy'
     /*javaargs = ["jdk",
      settings.OPENJDK_8_JAVA_MAJOR_VERSION,
      settings.OPENJDK_8_JAVA_UPDATE_VERSION,
