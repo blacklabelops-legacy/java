@@ -12,11 +12,13 @@
    return tagPostfix
  }
 
-def buildJobCI(dockerWorkspace,dockerImageName,dockerTags,dockerTestCommands,dockerImages,branchName,imageargs) {
+def buildJobPullImages(dockerImages) {
   for (int i=0;i < dockerImages.length;i++) {
     pullImage(dockerImages[i])
   }
+}
 
+def buildJobCI(dockerWorkspace,dockerImageName,dockerTags,dockerTestCommands,branchName,imageargs) {
   echo 'Building Images'
   for (int i=0;i < dockerTags.length;i++) {
     buildImage(dockerWorkspace,dockerImageName,dockerTags[i],branchName,imageargs)
@@ -33,12 +35,12 @@ def pullImage(imageName) {
   sh 'docker pull ' + imageName
 }
 
-def testImage(imageName, tagName, branchName,dockerCommands) {
+def testImage(imageName, tagName, branchName, dockerCommands) {
   def branchSuffix = branchName?.trim() ? '-' + branchName : ''
   def image = imageName + ':' + tagName + branchSuffix
   for (int i=0;i < dockerTestCommands.length;i++) {
     echo 'Testing image: ' + image
-    sh 'docker run --rm ' + image + ' ' + dockerTestCommands[i]
+    sh 'docker run --rm ' + image + ' ' + dockerCommands[i]
   }
 }
 
