@@ -22,7 +22,7 @@ def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,ima
   for (int i=0;i < imageargs.length;i++) {
     if (!"latest".equals(imageargs[i][0])) {
       echo 'Setting new tagname'
-      imageargs[i][0] = imageargs[i][0] + "." + imageargs[i][1] + "." + imageargs[i][2]
+      imageargs[i][0] = imageargs[i][0] + "." + imageargs[i][2] + "." + imageargs[i][3]
       echo 'Tagname: ' + imageargs[i][0]
     }
 
