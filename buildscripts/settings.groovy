@@ -17,7 +17,7 @@ dockerTestCommandsJRE =
   "sh -c \'echo $JAVA_HOME\'"] as String[]
 dockerRepositories = [["","Dockerhub","DockerhubEmail"]] as String[][]
 
-oracle_6_java_major_version = 6
+/*oracle_6_java_major_version = 6
 oracle_6_java_update_version = 45
 oracle_6_java_build_number = 06
 
@@ -35,6 +35,6 @@ openjdk_8_java_build_number = 14-r0
 
 openjdk_7_java_major_version = 7
 openjdk_7_java_update_version = 91
-openjdk_7_java_build_number = 2.6.3-r1
+openjdk_7_java_build_number = 2.6.3-r1*/
 
 return this;
