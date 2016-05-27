@@ -10,11 +10,11 @@ dockerTestCommandsJDK =
 ["java -version",
  "javac -version",
  "which java",
- "sh -c \'echo $JAVA_HOME\'"] as String[]
+ "sh -c \'echo \$JAVA_HOME\'"] as String[]
 dockerTestCommandsJRE =
  ["java -version",
   "which java",
-  "sh -c \'echo $JAVA_HOME\'"] as String[]
+  "sh -c \'echo \$JAVA_HOME\'"] as String[]
 dockerRepositories = [["","Dockerhub","DockerhubEmail"]] as String[][]
 
 /*oracle_6_java_major_version = 6
