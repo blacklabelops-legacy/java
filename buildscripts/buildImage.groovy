@@ -27,9 +27,15 @@ def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,ima
 
       echo 'Building Image'
       buildImage(dockerWorkspace,dockerImageName,tagname,branchName,imageargs[i])
-
+      
       echo 'Testing Image'
-      testImage(dockerImageName,tagname,branchName,dockerTestCommands)
+      if ("jre".equals(imageargs[i][1])) {
+        echo 'Triggering JRE Test'
+        testImage(dockerImageName,tagname,branchName,dockerTestCommands.dockerTestCommandsJRE)
+      } else {
+        echo 'Triggering JDK Test'
+        testImage(dockerImageName,tagname,branchName,dockerTestCommands.dockerTestCommandsJDK)
+      }
 
       echo 'Setting new tagname'
       tagname = imageargs[i][0] + "." + imageargs[i][2] + "." + imageargs[i][3]
