@@ -21,30 +21,31 @@ def buildJobPullImages(dockerImages) {
 def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,imageargs) {
   for (int i=0;i < imageargs.length;i++) {
     if (!"latest".equals(imageargs[i][0])) {
+      oldTagname = imageargs[i][0]
       echo 'Setting new tagname'
-      imageargs[i][0] = imageargs[i][0] + "." + imageargs[i][2]
+      imageargs[i][0] = oldTagname + "." + imageargs[i][2]
       echo 'Tagname: ' + imageargs[i][0]
 
-      echo 'Building Images'
+      echo 'Building Image'
       buildImage(dockerWorkspace,dockerImageName,imageargs[i][0],branchName,imageargs[i])
 
-      echo 'Testing Images'
+      echo 'Testing Image'
       testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands)
 
       echo 'Setting new tagname'
-      imageargs[i][0] = imageargs[i][0] + "." + imageargs[i][2] + "." + imageargs[i][3]
+      imageargs[i][0] = oldTagname + "." + imageargs[i][2] + "." + imageargs[i][3]
       echo 'Tagname: ' + imageargs[i][0]
 
-      echo 'Building Images'
+      echo 'Building Image'
       buildImage(dockerWorkspace,dockerImageName,imageargs[i][0],branchName,imageargs[i])
 
-      echo 'Testing Images'
+      echo 'Testing Image'
       testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands)
     } else {
-      echo 'Building Images'
+      echo 'Building Image'
       buildImage(dockerWorkspace,dockerImageName,imageargs[i][0],branchName,imageargs[i])
 
-      echo 'Testing Images'
+      echo 'Testing Image'
       testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands)
     }
   }
