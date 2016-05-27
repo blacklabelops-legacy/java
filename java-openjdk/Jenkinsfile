@@ -11,7 +11,7 @@ node('docker') {
     checkout scm
     job = load 'buildscripts/buildImage.groovy'
     settings = load 'buildscripts/settings.groovy'
-    //settingsJob = load 'java-openjdk/settings.groovy'
-    //job.buildJobPullImages(settingsJob.dockerImages)
+    settingsJob = load 'java-openjdk/settings.groovy'
+    job.buildJobPullImages(settingsJob.dockerImages)
     //job.buildJobCI("java-openjdk",settings.dockerImageName,settings.dockerTestCommandsJDK,job.getBranchName(),settingsJob.imageArgs)
 }
