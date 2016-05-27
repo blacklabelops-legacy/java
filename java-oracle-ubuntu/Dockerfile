@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM blacklabelops/ubuntu:16.04
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # build parameters
