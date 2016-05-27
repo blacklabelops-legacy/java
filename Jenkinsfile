@@ -10,5 +10,6 @@ node {
   checkout scm
   stage 'Build & Test Images'
   parallel(
-    "image-openjdk": { load 'java-openjdk/Jenkinsfile' })
+    "image-openjdk": { load 'java-openjdk/Jenkinsfile' },
+    "image-openjdk": { load 'java-jdk-6-alpine/Jenkinsfile' })
 }

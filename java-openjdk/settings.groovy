@@ -27,4 +27,6 @@ imageArgs = [
 
 dockerImages = ["blacklabelops/alpine:3.3"] as String[]
 
+dockerWorkspace = "java-openjdk"
+
 return this;
