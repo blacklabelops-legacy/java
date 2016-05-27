@@ -12,6 +12,6 @@ node('docker') {
     job = load 'buildscripts/buildImage.groovy'
     settings = load 'buildscripts/settings.groovy'
     settingsJob = load 'java-openjdk/settings.groovy'
-    job.buildJobPullImages(dockerImages)
+    job.buildJobPullImages(settingsJob.dockerImages)
     job.buildJobCI("java-openjdk",settings.dockerImageName,settings.dockerTestCommandsJDK,job.getBranchName(),settingsJob.imageArgs)
 }
