@@ -11,12 +11,7 @@ node('docker') {
     checkout scm
     job = load 'buildscripts/buildImage.groovy'
     settings = load 'buildscripts/settings.groovy'
-    javaargs = ["jdk",
-     settings.openjdk_8_java_major_version,
-     settings.openjdk_8_java_update_version,
-     settings.openjdk_8_java_build_number] as String[]
-    dockerTags = ["latest"] as String[]
-    dockerImages = ["blacklabelops/alpine:3.3"] as String[]
+    settingsJob = load 'java-openjdk/settings.groovy'
     job.buildJobPullImages(dockerImages)
-    job.buildJobCI("java-openjdk",settings.dockerImageName,dockerTags,settings.dockerTestCommandsJDK,job.getBranchName(),javaargs)
+    job.buildJobCI("java-openjdk",settings.dockerImageName,settings.dockerTestCommandsJDK,job.getBranchName(),settingsJob.imageArgs)
 }

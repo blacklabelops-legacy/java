@@ -18,16 +18,12 @@ def buildJobPullImages(dockerImages) {
   }
 }
 
-def buildJobCI(dockerWorkspace,dockerImageName,dockerTags,dockerTestCommands,branchName,imageargs) {
+def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,imageargs) {
   echo 'Building Images'
-  for (int i=0;i < dockerTags.length;i++) {
-    buildImage(dockerWorkspace,dockerImageName,dockerTags[i],branchName,imageargs)
-  }
+  buildImage(dockerWorkspace,dockerImageName,imageargs[0],branchName,imageargs)
 
   echo 'Testing Images'
-  for (int i=0;i < dockerTags.length;i++) {
-    testImage(dockerImageName,dockerTags[i],branchName,dockerTestCommands)
-  }
+  testImage(dockerImageName,imageargs[0],branchName,dockerTestCommands)
 }
 
 def pullImage(imageName) {
@@ -48,7 +44,7 @@ def buildImage(dockerWorkspace, imageName, tagName, branchName, buildargs) {
   def branchSuffix = branchName?.trim() ? '-' + branchName : ''
   def image = imageName + ':' + tagName + branchSuffix
   echo 'Building image: ' + image
-  sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[0] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[1] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[2] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[3] + ' -t ' + image + ' .'
+  sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[1] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[2] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[3] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[4] + ' -t ' + image + ' .'
 }
 
 return this;
