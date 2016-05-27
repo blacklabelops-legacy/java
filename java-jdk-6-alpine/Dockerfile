@@ -27,7 +27,7 @@ RUN export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE
     apk --allow-untrusted add /tmp/glibc-i18n-${GLIBC_VERSION}.apk && \
     /usr/glibc-compat/bin/localedef -i en_US -f UTF-8 en_US.UTF-8 && \
     # Install oracle java
-    wget --directory-prefix=/tmp \
+    wget --quiet --directory-prefix=/tmp \
          --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
          http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-b${JAVA_BUILD_NUMBER}/${JAVA_TARBALL} && \
     mkdir -p /opt/java && \
