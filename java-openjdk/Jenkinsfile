@@ -17,5 +17,5 @@ node('docker') {
      settings.openjdk_8_java_build_number] as String[]
     dockerTags = ["latest"] as String[]
     dockerImages = ["blacklabelops/alpine:3.3"] as String[]
-    job.buildJobCI("java-openjdk",settings.dockerImageName,dockerTags,settings.dockerTestCommands,dockerImages,job.getBranchName(),javaargs)
+    job.buildJobCI("java-openjdk",settings.dockerImageName,dockerTags,settings.dockerTestCommandsJDK,dockerImages,job.getBranchName(),javaargs)
 }
