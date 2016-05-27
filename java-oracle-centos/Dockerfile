@@ -14,6 +14,7 @@ ENV PATH=$PATH:$JAVA_HOME/bin
 # install java
 RUN yum install -y \
       tar \
+      which \
       wget && \
     export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-linux-x64.tar.gz && \
     wget --quiet --directory-prefix=/tmp \
