@@ -1,0 +1,21 @@
+/** Jenkins 2.0 Buildfile
+ *
+ * Master Jenkins 2.0 can be started by typing:
+ * docker run -d -p 8090:8080 --name jenkins blacklabelops/jenkins
+ *
+ * Slave 'docker' can be started by typing:
+ * docker run -d -v /var/run/docker.sock:/var/run/docker.sock --link jenkins:jenkins -e "SWARM_CLIENT_LABELS=docker" blacklabelops/swarm-dockerhost
+ **/
+
+node('docker') {
+    checkout scm
+    job = load 'buildscripts/buildImage.groovy'
+    settings = load 'buildscripts/settings.groovy'
+    javaargs = ["jdk",
+     settings.OPENJDK_8_JAVA_MAJOR_VERSION,
+     settings.OPENJDK_8_JAVA_UPDATE_VERSION,
+     settings.OPENJDK_8_JAVA_BUILD_NUMBER] as String[]
+    dockerTags = ["latest"] as String[]
+    dockerImages = ["blacklabelops/alpine:3.3"] as String[]
+    job.buildJobCI("java-openjdk",settings.dockerImageName,dockerTags,settings.dockerTestCommands,dockerImages,job.getBranchName(),javaargs)
+}
