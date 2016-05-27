@@ -19,7 +19,7 @@ imageArgs = [
       settings.openjdk_7_java_update_version,
       settings.openjdk_7_java_build_number],
     [ "openjre",
-      "jdk",
+      "jre",
       settings.openjdk_7_java_major_version,
       settings.openjdk_7_java_update_version,
       settings.openjdk_7_java_build_number]

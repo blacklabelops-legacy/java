@@ -39,13 +39,21 @@ def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,ima
       buildImage(dockerWorkspace,dockerImageName,tagname,branchName,imageargs[i])
 
       echo 'Testing Image'
-      testImage(dockerImageName,tagname,branchName,dockerTestCommands)
+      if ("jre".equals(imageargs[i][1])) {
+        testImage(dockerImageName,tagname,branchName,dockerTestCommands.dockerTestCommandsJRE)
+      } else {
+        testImage(dockerImageName,tagname,branchName,dockerTestCommands.dockerTestCommandsJDK)
+      }
     } else {
       echo 'Building Image'
       buildImage(dockerWorkspace,dockerImageName,imageargs[i][0],branchName,imageargs[i])
 
       echo 'Testing Image'
-      testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands)
+      if ("jre".equals(imageargs[i][1])) {
+        testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands.dockerTestCommandsJRE)
+      } else {
+        testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands.dockerTestCommandsJDK)
+      }
     }
   }
 }

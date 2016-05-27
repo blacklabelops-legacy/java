@@ -11,7 +11,7 @@ node('docker') {
     checkout scm
     job = load 'buildscripts/buildImage.groovy'
     settings = load 'buildscripts/settings.groovy'
-    settingsJob = load 'java-jdk-6-alpine/settings.groovy'
+    settingsJob = load 'java-oracle-alpine/settings.groovy'
     job.buildJobPullImages(settingsJob.dockerImages)
     job.buildJobCI(settings.dockerWorkspace,settings.dockerImageName,settings,job.getBranchName(),settingsJob.imageArgs)
 }
