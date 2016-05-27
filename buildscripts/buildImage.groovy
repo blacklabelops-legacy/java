@@ -19,11 +19,13 @@ def buildJobPullImages(dockerImages) {
 }
 
 def buildJobCI(dockerWorkspace,dockerImageName,dockerTestCommands,branchName,imageargs) {
-  echo 'Building Images'
-  buildImage(dockerWorkspace,dockerImageName,imageargs[0],branchName,imageargs)
+  for (int i=0;i < imageargs.length;i++) {
+    echo 'Building Images'
+    buildImage(dockerWorkspace,dockerImageName,imageargs[i][0],branchName,imageargs[i])
 
-  echo 'Testing Images'
-  testImage(dockerImageName,imageargs[0],branchName,dockerTestCommands)
+    echo 'Testing Images'
+    testImage(dockerImageName,imageargs[i][0],branchName,dockerTestCommands)
+  }
 }
 
 def pullImage(imageName) {
