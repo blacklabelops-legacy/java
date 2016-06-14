@@ -7,7 +7,9 @@
 | Java Version | Tag          | Dockerfile |
 |--------------|--------------|------------|
 | Java JRE 8   | jre8, latest | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
-| Java JRE 7   | jre7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java Server JRE 8   | server-jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java JRE 7   | jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java Server JRE 7   | server-jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
 | Java JDK 8   | jdk8         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
 | Java JDK 7   | jdk7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
 | Java JDK 6   | jdk6         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-6-alpine/Dockerfile) |
@@ -17,7 +19,9 @@
 | Java Version | Tag | Dockerfile |
 |--------------|-----|------------|
 | Java JRE 8 | centos.jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
+| Java Server JRE 8 | centos.server-jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 | Java JRE 7 | centos.jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
+| Java Server JRE 7 | centos.server-jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 | Java JDK 8 | centos.jdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 | Java JDK 7 | centos.jdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 | Java JDK 6 | centos.jdk6 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
@@ -27,7 +31,9 @@
 | Java Version | Tag | Dockerfile |
 |--------------|-----|------------|
 | Java JRE 8 | ubuntu.jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
+| Java Server JRE 8 | ubuntu.server-jre8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 | Java JRE 7 | ubuntu.jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
+| Java Server JRE 7 | ubuntu.server-jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 | Java JDK 8 | ubuntu.jdk8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 | Java JDK 7 | ubuntu.jdk7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 
