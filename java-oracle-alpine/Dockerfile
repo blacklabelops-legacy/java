@@ -32,7 +32,7 @@ RUN export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE
          http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-b${JAVA_BUILD_NUMBER}/${JAVA_TARBALL} && \
     mkdir -p /opt/java && \
     tar -xzf /tmp/${JAVA_TARBALL} -C /opt/java/ && \
-    if  [ "${JAVA_DISTRIBUTION}" = "server-jre^" ]; \
+    if  [ "${JAVA_DISTRIBUTION}" = "server-jre" ]; \
       then mv /opt/java/server-jre${JAVA_VERSION} ${JAVA_HOME} ; \
     fi && \
     ln -s ${JAVA_HOME}/bin/java /usr/bin/java && \
