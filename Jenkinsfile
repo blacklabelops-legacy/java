@@ -10,10 +10,10 @@ node {
   checkout scm
   stage 'Build & Test Images'
   parallel(
-    "image-openjdk": { load 'java-openjdk/Jenkinsfile' },
-    "image-jdk6-alpine": { load 'java-jdk-6-alpine/Jenkinsfile' },
-    "image-jdk6-centos": { load 'java-jdk-6-centos/Jenkinsfile' },
-    "image-oracle-centos": { load 'java-oracle-centos/Jenkinsfile' },
-    "image-oracle-ubuntu": { load 'java-oracle-ubuntu/Jenkinsfile' },
+    //"image-openjdk": { load 'java-openjdk/Jenkinsfile' },
+    //"image-jdk6-alpine": { load 'java-jdk-6-alpine/Jenkinsfile' },
+    //"image-jdk6-centos": { load 'java-jdk-6-centos/Jenkinsfile' },
+    //"image-oracle-centos": { load 'java-oracle-centos/Jenkinsfile' },
+    //"image-oracle-ubuntu": { load 'java-oracle-ubuntu/Jenkinsfile' },
     "image-oracle-alpine": { load 'java-oracle-alpine/Jenkinsfile' })
 }
