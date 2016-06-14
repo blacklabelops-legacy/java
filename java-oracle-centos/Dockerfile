@@ -22,7 +22,10 @@ RUN yum install -y \
          http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-b${JAVA_BUILD_NUMBER}/${JAVA_TARBALL} && \
     mkdir -p /opt/java && \
     tar -xzf /tmp/${JAVA_TARBALL} -C /opt/java/ && \
-    alternatives --install /usr/bin/java java /opt/java/${JAVA_DISTRIBUTION}${JAVA_VERSION}/bin/java 100 && \
+    if  [ "${JAVA_DISTRIBUTION}" = "server-jre" ]; \
+      then mv /opt/java/jdk${JAVA_VERSION} ${JAVA_HOME} ; \
+    fi && \
+    alternatives --install /usr/bin/java java ${JAVA_HOME}/bin/java 100 && \
     yum erase -y \
           tar \
           wget && \
