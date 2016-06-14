@@ -33,7 +33,7 @@ RUN export JAVA_TARBALL=${JAVA_DISTRIBUTION}-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE
     mkdir -p /opt/java && \
     tar -xzf /tmp/${JAVA_TARBALL} -C /opt/java/ && \
     if  [ "${JAVA_DISTRIBUTION}" = "server-jre" ]; \
-      then mv /opt/java/server-jre${JAVA_VERSION} ${JAVA_HOME} ; \
+      then mv /opt/java/jdk${JAVA_VERSION} ${JAVA_HOME} ; \
     fi && \
     ln -s ${JAVA_HOME}/bin/java /usr/bin/java && \
     # Remove obsolete packages
