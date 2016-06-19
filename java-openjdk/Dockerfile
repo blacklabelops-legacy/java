@@ -1,4 +1,4 @@
-FROM blacklabelops/alpine:3.3
+FROM blacklabelops/alpine:3.4
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 ARG JAVA_DISTRIBUTION=jdk
