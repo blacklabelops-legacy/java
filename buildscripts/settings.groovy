@@ -24,7 +24,7 @@ oracle_7_java_update_version = "80"
 oracle_7_java_build_number = "15"
 
 oracle_8_java_major_version = "8"
-oracle_8_java_update_version = "92"
+oracle_8_java_update_version = "102"
 oracle_8_java_build_number = "14"
 
 openjdk_8_java_major_version = "8"

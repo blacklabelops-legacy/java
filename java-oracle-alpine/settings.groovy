@@ -40,7 +40,7 @@ imageArgs = [
       settings.oracle_7_java_build_number]
   ] as String[][]
 
-dockerImages = ["blacklabelops/alpine:3.3"] as String[]
+dockerImages = ["blacklabelops/alpine:3.4"] as String[]
 
 dockerWorkspace = "java-oracle-alpine"
 
