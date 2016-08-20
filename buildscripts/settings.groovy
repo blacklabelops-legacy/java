@@ -29,7 +29,7 @@ oracle_8_java_build_number = "14"
 
 openjdk_8_java_major_version = "8"
 openjdk_8_java_update_version = "92"
-openjdk_8_java_build_number = "14-r0"
+openjdk_8_java_build_number = "14-r1"
 
 openjdk_7_java_major_version = "7"
 openjdk_7_java_update_version = "91"
