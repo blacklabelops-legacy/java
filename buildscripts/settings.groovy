@@ -24,12 +24,12 @@ oracle_7_java_update_version = "80"
 oracle_7_java_build_number = "15"
 
 oracle_8_java_major_version = "8"
-oracle_8_java_update_version = "102"
-oracle_8_java_build_number = "14"
+oracle_8_java_update_version = "112"
+oracle_8_java_build_number = "15"
 
 openjdk_8_java_major_version = "8"
-openjdk_8_java_update_version = "92"
-openjdk_8_java_build_number = "14-r1"
+openjdk_8_java_update_version = "111"
+openjdk_8_java_build_number = "14-r10"
 
 openjdk_7_java_major_version = "7"
 openjdk_7_java_update_version = "111"
