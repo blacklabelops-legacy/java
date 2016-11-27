@@ -32,7 +32,7 @@ openjdk_8_java_update_version = "111"
 openjdk_8_java_build_number = "14-r0"
 
 openjdk_7_java_major_version = "7"
-openjdk_7_java_update_version = "111"
-openjdk_7_java_build_number = "2.6.7-r2"
+openjdk_7_java_update_version = "121"
+openjdk_7_java_build_number = "2.6.8-r0"
 
 return this;
