@@ -26,6 +26,5 @@ RUN yum install -y \
     mv ${JAVA_DISTRIBUTION}${JAVA_VERSION} /opt/java && \
     alternatives --install /usr/bin/java java /opt/java/${JAVA_DISTRIBUTION}${JAVA_VERSION}/bin/java 100 && \
     yum erase -y \
-        tar \
         wget && \
     yum clean all && rm -rf /var/cache/yum/* && rm -rf /tmp/* && rm -rf /var/log/*

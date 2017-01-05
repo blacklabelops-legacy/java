@@ -27,7 +27,6 @@ RUN yum install -y \
     fi && \
     alternatives --install /usr/bin/java java ${JAVA_HOME}/bin/java 100 && \
     yum erase -y \
-          tar \
           wget && \
     yum clean all && rm -rf /var/cache/yum/* && \
     rm -rf /tmp/* && rm -rf /var/log/*
