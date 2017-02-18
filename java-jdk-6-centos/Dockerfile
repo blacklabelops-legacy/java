@@ -1,5 +1,4 @@
 FROM blacklabelops/centos:7.2.1511
-MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # build parameters
 ARG JAVA_DISTRIBUTION=jdk
@@ -7,6 +6,7 @@ ARG JAVA_MAJOR_VERSION=6
 ARG JAVA_UPDATE_VERSION=45
 ARG JAVA_BUILD_NUMBER=06
 ARG JAVA_HASH=
+ARG BUILD_DATE=undefined
 
 ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
 ENV JAVA_HOME=/opt/java/${JAVA_DISTRIBUTION}${JAVA_VERSION}
@@ -29,3 +29,10 @@ RUN yum install -y \
     yum erase -y \
         wget && \
     yum clean all && rm -rf /var/cache/yum/* && rm -rf /tmp/* && rm -rf /var/log/*
+
+LABEL com.blacklabelops.image.name.java="java-"${JAVA_DISTRIBUTION}"-base-image" \
+      com.blacklabelops.application.name.java="java" \
+      com.blacklabelops.application.version.java=${JAVA_DISTRIBUTION}${JAVA_MAJOR_VERSION}"-"${JAVA_UPDATE_VERSION}"-b"${JAVA_BUILD_NUMBER} \
+      com.blacklabelops.application.name.glibc="glibc" \
+      com.blacklabelops.application.version.glibc=${GLIBC_VERSION} \
+      com.blacklabelops.image.builddate.java=${BUILD_DATE}

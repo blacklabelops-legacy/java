@@ -1,5 +1,4 @@
 FROM blacklabelops/ubuntu:16.04
-MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 # build parameters
 ARG JAVA_DISTRIBUTION=jdk
@@ -7,6 +6,7 @@ ARG JAVA_MAJOR_VERSION=8
 ARG JAVA_UPDATE_VERSION=121
 ARG JAVA_BUILD_NUMBER=13
 ARG JAVA_HASH=e9e7ea248e2c4826b92b3f075a80e441
+ARG BUILD_DATE=undefined
 
 ENV JAVA_VERSION=1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
 ENV JAVA_HOME=/opt/java/${JAVA_DISTRIBUTION}${JAVA_VERSION}
@@ -33,3 +33,10 @@ RUN apt-get update && \
           wget && \
     apt-get autoclean && \
     rm -rf /tmp/* && rm -rf /var/log/*
+
+LABEL com.blacklabelops.image.name.java="java-"${JAVA_DISTRIBUTION}"-base-image" \
+      com.blacklabelops.application.name.java="java" \
+      com.blacklabelops.application.version.java=${JAVA_DISTRIBUTION}${JAVA_MAJOR_VERSION}"-"${JAVA_UPDATE_VERSION}"-b"${JAVA_BUILD_NUMBER} \
+      com.blacklabelops.application.name.glibc="glibc" \
+      com.blacklabelops.application.version.glibc=${GLIBC_VERSION} \
+      com.blacklabelops.image.builddate.java=${BUILD_DATE}

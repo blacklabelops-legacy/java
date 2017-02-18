@@ -1,11 +1,11 @@
 FROM blacklabelops/alpine:3.5
-MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
 ARG JAVA_DISTRIBUTION=jdk
 ARG JAVA_MAJOR_VERSION=8
 ARG JAVA_UPDATE_VERSION=latest
 ARG JAVA_BUILD_NUMBER=
 ARG JAVA_HASH=
+ARG BUILD_DATE=undefined
 
 RUN if  [ "${JAVA_DISTRIBUTION}" = "jre" ]; \
       then export JAVA_PACKAGE_POSTFIX_VERSION=-jre ; \
@@ -23,3 +23,10 @@ RUN if  [ "${JAVA_DISTRIBUTION}" = "jre" ]; \
 
 ENV JAVA_HOME=/usr/lib/jvm/default-jvm
 ENV PATH=$JAVA_HOME/bin:$PATH
+
+LABEL com.blacklabelops.image.name.java="java-"${JAVA_DISTRIBUTION}"-base-image" \
+      com.blacklabelops.application.name.java="java" \
+      com.blacklabelops.application.version.java=${JAVA_DISTRIBUTION}${JAVA_MAJOR_VERSION}"-"${JAVA_UPDATE_VERSION}"-b"${JAVA_BUILD_NUMBER} \
+      com.blacklabelops.application.name.glibc="glibc" \
+      com.blacklabelops.application.version.glibc=${GLIBC_VERSION} \
+      com.blacklabelops.image.builddate.java=${BUILD_DATE}

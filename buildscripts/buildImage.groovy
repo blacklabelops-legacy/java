@@ -87,9 +87,9 @@ def buildImage(dockerWorkspace, imageName, tagName, branchName, buildargs) {
   def image = imageName + ':' + tagName + branchSuffix
   echo 'Building image: ' + image
   if (buildargs.length > 5)
-    sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[1] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[2] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[3] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[4] + ' --build-arg JAVA_HASH=' + buildargs[5] + ' -t ' + image + ' .'
+    sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[1] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[2] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[3] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[4] + ' --build-arg JAVA_HASH=' + buildargs[5] + ' --build-arg BUILD_DATE="' + new Date().format('dd/MM/yyyy-HH:mm-Z') + '" -t ' + image + ' .'
   else
-    sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[1] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[2] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[3] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[4] + ' --build-arg JAVA_HASH=' + ' -t ' + image + ' .'
+    sh 'cd ' + dockerWorkspace + ' && docker build --no-cache --build-arg JAVA_DISTRIBUTION=' + buildargs[1] + ' --build-arg JAVA_MAJOR_VERSION=' + buildargs[2] + ' --build-arg JAVA_UPDATE_VERSION=' + buildargs[3] + ' --build-arg JAVA_BUILD_NUMBER=' + buildargs[4] + ' --build-arg JAVA_HASH=' + ' --build-arg BUILD_DATE="' + new Date().format('dd/MM/yyyy-HH:mm-Z') + '" -t ' + image + ' .'
 }
 
 return this;
