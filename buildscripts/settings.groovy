@@ -24,9 +24,9 @@ oracle_7_java_update_version = "80"
 oracle_7_java_build_number = "15"
 
 oracle_8_java_major_version = "8"
-oracle_8_java_update_version = "121"
-oracle_8_java_build_number = "13"
-oracle_8_java_hash="e9e7ea248e2c4826b92b3f075a80e441"
+oracle_8_java_update_version = "131"
+oracle_8_java_build_number = "11"
+oracle_8_java_hash="d54c1d3a095b4ff2b6607d096fa80163"
 
 openjdk_8_java_major_version = "8"
 openjdk_8_java_update_version = "121"
