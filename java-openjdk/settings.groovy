@@ -25,7 +25,7 @@ imageArgs = [
       settings.openjdk_7_java_build_number]
   ] as String[][]
 
-dockerImages = ["blacklabelops/alpine:3.4"] as String[]
+dockerImages = ["blacklabelops/alpine:3.6"] as String[]
 
 dockerWorkspace = "java-openjdk"
 

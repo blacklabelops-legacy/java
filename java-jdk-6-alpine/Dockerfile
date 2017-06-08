@@ -1,4 +1,4 @@
-FROM blacklabelops/alpine:3.5
+FROM blacklabelops/alpine:3.6
 
 # build parameters
 ARG JAVA_DISTRIBUTION=jdk
