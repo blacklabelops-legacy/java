@@ -30,7 +30,7 @@ oracle_8_java_hash="d54c1d3a095b4ff2b6607d096fa80163"
 
 openjdk_8_java_major_version = "8"
 openjdk_8_java_update_version = "131"
-openjdk_8_java_build_number = "11-r1"
+openjdk_8_java_build_number = "11-r2"
 
 openjdk_7_java_major_version = "7"
 openjdk_7_java_update_version = "121"
