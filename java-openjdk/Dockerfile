@@ -1,6 +1,6 @@
 FROM blacklabelops/alpine:3.6
 
-ARG JAVA_DISTRIBUTION=jdk
+ARG JAVA_DISTRIBUTION=jre
 ARG JAVA_MAJOR_VERSION=8
 ARG JAVA_UPDATE_VERSION=latest
 ARG JAVA_BUILD_NUMBER=
@@ -27,6 +27,4 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 LABEL com.blacklabelops.image.name.java="java-"${JAVA_DISTRIBUTION}"-base-image" \
       com.blacklabelops.application.name.java="java" \
       com.blacklabelops.application.version.java=${JAVA_DISTRIBUTION}${JAVA_MAJOR_VERSION}"-"${JAVA_UPDATE_VERSION}"-b"${JAVA_BUILD_NUMBER} \
-      com.blacklabelops.application.name.glibc="glibc" \
-      com.blacklabelops.application.version.glibc=${GLIBC_VERSION} \
       com.blacklabelops.image.builddate.java=${BUILD_DATE}
