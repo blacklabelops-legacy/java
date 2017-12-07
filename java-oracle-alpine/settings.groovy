@@ -29,7 +29,7 @@ imageArgs = [
       settings.oracle_8_java_hash]
   ] as String[][]
 
-dockerImages = ["blacklabelops/alpine:3.6"] as String[]
+dockerImages = ["blacklabelops/alpine:3.7"] as String[]
 
 dockerWorkspace = "java-oracle-alpine"
 
