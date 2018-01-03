@@ -8,7 +8,11 @@
 |--------------|--------------|------------|
 | Java JRE 8   | jre.8, latest | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
 | Java Server JRE 8   | server-jre.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java JRE 7   | jre7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java Server JRE 7   | server-jre.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
 | Java JDK 8   | jdk.8         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java JDK 7   | jdk.7         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-alpine/Dockerfile) |
+| Java JDK 6   | jdk.6         | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-jdk-6-alpine/Dockerfile) |
 
 ## Supported CentOS Images
 
@@ -16,7 +20,11 @@
 |--------------|-----|------------|
 | Java JRE 8 | centos.jre.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 | Java Server JRE 8 | centos.server-jre.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
+| Java JRE 7 | centos.jre.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
+| Java Server JRE 7 | centos.server-jre.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 | Java JDK 8 | centos.jdk.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
+| Java JDK 7 | centos.jdk.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
+| Java JDK 6 | centos.jdk.6 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-centos/Dockerfile) |
 
 ## Supported Ubuntu Images
 
@@ -24,14 +32,19 @@
 |--------------|-----|------------|
 | Java JRE 8 | ubuntu.jre.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 | Java Server JRE 8 | ubuntu.server-jre.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
+| Java JRE 7 | ubuntu.jre.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
+| Java Server JRE 7 | ubuntu.server-jre.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 | Java JDK 8 | ubuntu.jdk.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
+| Java JDK 7 | ubuntu.jdk.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-oracle-ubuntu/Dockerfile) |
 
 ## Supported OpenJDK Images
 
 | Java Version | Tag | Dockerfile |
 |--------------|-----|------------|
 | Java JRE 8 | openjre.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk/Dockerfile) |
+| Java JRE 7 | openjre.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk/Dockerfile) |
 | Java JDK 8 | openjdk.8 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk/Dockerfile) |
+| Java JDK 7 | openjdk.7 | [Dockerfile](https://github.com/blacklabelops/java/blob/master/java-openjdk/Dockerfile) |
 
 # Make It Short
 
@@ -45,10 +58,10 @@ $ docker run blacklabelops/java java -version
 
 Just add the respective tag to the image name!
 
-Example: Java JDK 8
+Example: Java JDK 7
 
 ~~~~
-$ docker run blacklabelops/java:jdk.8 java -version
+$ docker run blacklabelops/java:jdk7 java -version
 ~~~~
 
 > Will print the java version on console.
@@ -109,7 +122,7 @@ $ docker build -t blacklabelops/java \
 
 # Support
 
-Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](http://support.blacklabelops.com)
+Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://www.hipchat.com/geogBFvEM)
 
 # Github
 
