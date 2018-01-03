@@ -1,4 +1,4 @@
-FROM blacklabelops/alpine:3.6
+FROM blacklabelops/alpine:3.7
 
 ARG JAVA_DISTRIBUTION=jre
 ARG JAVA_MAJOR_VERSION=8
