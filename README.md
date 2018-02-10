@@ -102,23 +102,28 @@ $ docker build -t blacklabelops/java -f java-oracle-alpine/Dockerfile .
 
 Build a specific Oracle Version with the following build arguments:
 
-* JAVA_DISTRIBUTION: jdk or jre (default: jdk)
+* JAVA_DISTRIBUTION: jdk, jre, or server-jre (default: jdk)
 * JAVA_MAJOR_VERSION: 7 or 8
 * JAVA_UPDATE_VERSION: The minor version from any Oracle Java download page.
 * JAVA_BUILD_NUMBER: The build number from any Oracle Java download page.
+* JAVA_HASH: The hash from any Oracle Java download page.
 
 Example:
 
 ~~~~
 $ docker build -t blacklabelops/java \
-  --build-arg JAVA_DISTRIBUTION=jdk \
+  --build-arg JAVA_DISTRIBUTION=server-jre \
   --build-arg JAVA_MAJOR_VERSION=8 \
-  --build-arg JAVA_UPDATE_VERSION=74 \
-  --build-arg JAVA_BUILD_NUMBER=02 \
+  --build-arg JAVA_UPDATE_VERSION=161 \
+  --build-arg JAVA_BUILD_NUMBER=12 \
+  --build-arg JAVA_HASH=2f38c3b165be4555a1fa6e98c45e0808 \
   -f java-oracle-alpine/Dockerfile .
 ~~~~
 
-> Will build image containing Java JDK 8 in version 8.74.02.
+> Will build image containing Server JRE 8 in version 8.161.12.
+
+> Note: It's only possible to download the Java versions available at http://www.oracle.com/technetwork/java/javase/downloads/index.html.
+> (An Oracle account is necessary to download archived Java versions.)
 
 # Support
 
