@@ -23,7 +23,7 @@ imageArgs = [
       settings.oracle_8_java_hash]
   ] as String[][]
 
-dockerImages = ["blacklabelops/ubuntu:16.04"] as String[]
+dockerImages = ["blacklabelops/ubuntu:18:10"] as String[]
 
 dockerWorkspace = "java-oracle-ubuntu"
 

@@ -1,4 +1,4 @@
-FROM blacklabelops/centos:7.2.1511
+FROM blacklabelops/centos:7.4.1708
 
 # build parameters
 ARG JAVA_DISTRIBUTION=jdk

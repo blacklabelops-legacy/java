@@ -23,7 +23,7 @@ imageArgs = [
       settings.oracle_8_java_hash]
   ] as String[][]
 
-dockerImages = ["blacklabelops/centos:7.2.1511"] as String[]
+dockerImages = ["blacklabelops/centos:7.4.1708"] as String[]
 
 dockerWorkspace = "java-oracle-centos"
 
