@@ -1,4 +1,4 @@
-FROM blacklabelops/ubuntu:18:10
+FROM blacklabelops/ubuntu:18.04
 
 # build parameters
 ARG JAVA_DISTRIBUTION=jdk
