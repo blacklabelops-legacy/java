@@ -10,8 +10,5 @@ node {
   checkout scm
   stage 'Build & Test Images'
   parallel(
-    "image-openjdk": { load 'java-openjdk/Jenkinsfile' },
-    "image-oracle-centos": { load 'java-oracle-centos/Jenkinsfile' },
-    "image-oracle-ubuntu": { load 'java-oracle-ubuntu/Jenkinsfile' },
-    "image-oracle-alpine": { load 'java-oracle-alpine/Jenkinsfile' })
+    "image-openjdk": { load 'java-openjdk/Jenkinsfile' })
 }
