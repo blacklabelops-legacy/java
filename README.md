@@ -1,7 +1,5 @@
 # Dockerized Java Images
 
-[![Docker Stars](https://img.shields.io/docker/stars/blacklabelops/java.svg)](https://hub.docker.com/r/blacklabelops/java/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacklabelops/java.svg)](https://hub.docker.com/r/blacklabelops/java/)
-
 ## Supported OpenJDK Images
 
 | Java Version | Tag | Dockerfile |
@@ -57,10 +55,6 @@ Build a specific version with the following build arguments:
 * JAVA_MAJOR_VERSION: 7 or 8
 * JAVA_UPDATE_VERSION: The minor version.
 * JAVA_BUILD_NUMBER: The build number.
-
-# Support
-
-Leave a message and ask questions on Hipchat: [blacklabelops/hipchat](https://www.hipchat.com/geogBFvEM)
 
 # References
 
